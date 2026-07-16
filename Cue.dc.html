@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./vendor/react.production.min.js"></script>
-<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./react.production.min.js"></script>
+<script src="./react-dom.production.min.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -12,14 +12,14 @@
 <helmet>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cue — Case Study — Dornaz Niknezhad</title>
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
-  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="colors.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="spacing.css">
+  <link rel="stylesheet" href="shadows.css">
+  <link rel="stylesheet" href="radius.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="_ds_bundle.js"></script>
   <style>
     body { margin: 0; background: #ffffff; }
     a { color: var(--link-color); }
@@ -43,7 +43,7 @@
 
 <div style="background:#ffffff; --section-padding-y:{{padY}}; --text-accent:{{aBase}}; --text-accent-hover:{{aDark}}; --accent:{{aBase}}; --accent-active:{{aDark}}; --link-color:{{aBase}}; --link-hover:{{aDark}}; --border-accent:{{aBase}}; --surface-accent-tint:{{aTint}}; --blue-500:{{aBase}}; --font-display-xl-family:{{dispFam}}; --font-display-lg-family:{{dispFam}}; --font-display-italic-family:{{dispFam}};">
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
 
   <section style="padding: 152px var(--space-8) 0; max-width: 1120px; margin: 0 auto;">
     <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
@@ -69,7 +69,7 @@
     </div>
     <a href="{{protoUrl}}" target="_blank" rel="noopener" style="margin-top: var(--space-16); display: block; text-decoration: none; border-radius: var(--radius-xl); background: var(--surface-sunken); border: 1px solid var(--border-subtle); padding: 56px 48px; overflow: hidden;" style-hover="border-color: var(--border-accent);">
       <div style="display: flex; align-items: center; justify-content: center; gap: 64px; flex-wrap: wrap;">
-        <img src="uploads/pasted-1783528090391-0.png" alt="Cue home screen with financial pulse and shared goal" style="width: 100%; max-width: 280px; height: auto; display: block; filter: drop-shadow(0 26px 52px rgba(15,23,42,0.20));">
+        <img src="pasted-1783528090391-0.png" alt="Cue home screen with financial pulse and shared goal" style="width: 100%; max-width: 280px; height: auto; display: block; filter: drop-shadow(0 26px 52px rgba(15,23,42,0.20));">
         <div style="max-width: 380px;">
           <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 14px;">Live iOS prototype</div>
           <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 12px; letter-spacing: -0.01em;">Click through the real thing.</h3>
@@ -308,17 +308,17 @@
 
     <div class="cs-screens" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 72px;">
       <div style="display: flex; flex-direction: column; align-items: center;">
-        <img src="uploads/pasted-1783528090391-0.png" alt="Cue home screen with financial pulse and shared goal" style="width: 100%; max-width: 270px; height: auto; display: block;">
+        <img src="pasted-1783528090391-0.png" alt="Cue home screen with financial pulse and shared goal" style="width: 100%; max-width: 270px; height: auto; display: block;">
         <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-top: 20px;">Stage 1, awareness</div>
         <p style="font: var(--text-body-sm); color: var(--text-secondary); text-align: center; margin-top: 8px; max-width: 260px;">One shared home: financial pulse and goals, pacing at a glance from the same facts.</p>
       </div>
       <div style="display: flex; flex-direction: column; align-items: center;">
-        <img src="uploads/pasted-1783528082370-0.png" alt="Cue goals and insights screen" style="width: 100%; max-width: 270px; height: auto; display: block;">
+        <img src="pasted-1783528082370-0.png" alt="Cue goals and insights screen" style="width: 100%; max-width: 270px; height: auto; display: block;">
         <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-top: 20px;">Goals and insights</div>
         <p style="font: var(--text-body-sm); color: var(--text-secondary); text-align: center; margin-top: 8px; max-width: 260px;">Shared goals with real progress and pacing, not just balances.</p>
       </div>
       <div style="display: flex; flex-direction: column; align-items: center;">
-        <img src="uploads/pasted-1783528094519-0.png" alt="Cue savings screen with auto-save" style="width: 100%; max-width: 270px; height: auto; display: block;">
+        <img src="pasted-1783528094519-0.png" alt="Cue savings screen with auto-save" style="width: 100%; max-width: 270px; height: auto; display: block;">
         <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-top: 20px;">Stage 5, reinforcement</div>
         <p style="font: var(--text-body-sm); color: var(--text-secondary); text-align: center; margin-top: 8px; max-width: 260px;">Where the money goes, plus auto-save that keeps the goal on track.</p>
       </div>
@@ -398,11 +398,11 @@
         <div style="font: var(--text-h3); color: var(--text-primary); margin-bottom: 20px; letter-spacing: -0.01em;">Octolux: the agentic AI operator platform</div>
         <span style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-body-sm); font-weight: 600; color: var(--text-accent);">View case study &rarr;</span>
       </div>
-      <div style="background: var(--surface-sunken) center / cover no-repeat url(uploads/pasted-1783546057756-0.png); min-height: 200px;"></div>
+      <div style="background: var(--surface-sunken) center / cover no-repeat url(pasted-1783546057756-0.png); min-height: 200px;"></div>
     </a>
   </section>
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
 
 </div>
 </x-dc>
@@ -576,9 +576,9 @@ class Component extends DCLogic {
         { n: 5, title: 'Reinforcement', subtitle: 'Close the loop kindly', does: 'Calm, shared language and progress that is celebrated, so both partners stay engaged.', pain: 'Avoidance and shame. Only 8% find current alerts supportive; harsh tone drives people away.' },
       ],
       screens: [
-        { src: 'uploads/pasted-1783528090391-0.png', alt: 'Cue home screen with financial pulse and shared goal', stage: 'Stage 1, awareness', caption: 'One shared home: financial pulse and goals, pacing at a glance from the same facts.' },
-        { src: 'uploads/pasted-1783528082370-0.png', alt: 'Cue goals and insights screen', stage: 'Goals and insights', caption: 'Shared goals with real progress and pacing, not just balances.' },
-        { src: 'uploads/pasted-1783528094519-0.png', alt: 'Cue savings screen with auto-save', stage: 'Stage 5, reinforcement', caption: 'Where the money goes, plus auto-save that keeps the goal on track.' },
+        { src: 'pasted-1783528090391-0.png', alt: 'Cue home screen with financial pulse and shared goal', stage: 'Stage 1, awareness', caption: 'One shared home: financial pulse and goals, pacing at a glance from the same facts.' },
+        { src: 'pasted-1783528082370-0.png', alt: 'Cue goals and insights screen', stage: 'Goals and insights', caption: 'Shared goals with real progress and pacing, not just balances.' },
+        { src: 'pasted-1783528094519-0.png', alt: 'Cue savings screen with auto-save', stage: 'Stage 5, reinforcement', caption: 'Where the money goes, plus auto-save that keeps the goal on track.' },
       ],
       sampleAlerts: [
         { tier: 'Heads up', body: 'This furniture purchase may delay your vacation goal by about 5 days.', action: 'Review together', color: amber },

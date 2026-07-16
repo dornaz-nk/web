@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./vendor/react.production.min.js"></script>
-<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./react.production.min.js"></script>
+<script src="./react-dom.production.min.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -12,14 +12,14 @@
 <helmet>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Dornaz Niknezhad</title>
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
-  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="colors.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="spacing.css">
+  <link rel="stylesheet" href="shadows.css">
+  <link rel="stylesheet" href="radius.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="_ds_bundle.js"></script>
   <style>
     body { margin: 0; background: #ffffff; }
     a { color: var(--link-color); }
@@ -35,7 +35,7 @@
 
 <div style="background:#ffffff; --section-padding-y: 104px;">
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
 
   <section class="about-hero-grid" style="padding: 152px var(--space-8) 96px; max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;">
     <div>
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div>
-      <img src="uploads/pasted-1783630677001-0.png" alt="Portrait of Dornaz Niknezhad" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: var(--radius-lg); display: block; box-shadow: var(--shadow-md);">
+      <img src="pasted-1783630677001-0.png" alt="Portrait of Dornaz Niknezhad" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: var(--radius-lg); display: block; box-shadow: var(--shadow-md);">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px;">
         <div>
           <div style="font: var(--text-caption); color: var(--ink-600); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Based in</div>
@@ -159,7 +159,7 @@
     </div>
   </section>
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
 
 </div>
 </x-dc>

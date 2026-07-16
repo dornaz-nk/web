@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./vendor/react.production.min.js"></script>
-<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./react.production.min.js"></script>
+<script src="./react-dom.production.min.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -12,14 +12,14 @@
 <helmet>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dornaz Niknezhad — Product &amp; UX Designer</title>
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
-  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="colors.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="spacing.css">
+  <link rel="stylesheet" href="shadows.css">
+  <link rel="stylesheet" href="radius.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="_ds_bundle.js"></script>
   <style>
     body { margin: 0; background: #ffffff; }
     a { color: var(--link-color); }
@@ -35,7 +35,7 @@
 
 <div id="top" style="background:#ffffff;">
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
 
   <section style="padding: 168px var(--space-8) 120px; max-width: 1120px; margin: 0 auto;">
     <div style="animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) both;">
@@ -126,7 +126,7 @@
     </div>
   </section>
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
 
 </div>
 </x-dc>
@@ -142,7 +142,7 @@ class Component extends DCLogic {
         badge: 'Flagship · Shipped',
         href: 'Octolux.dc.html',
         span: 'span 2',
-        coverPad: 'uploads/pasted-1783546057756-0.png',
+        coverPad: 'pasted-1783546057756-0.png',
         noCover: false,
       },
       {
@@ -153,7 +153,7 @@ class Component extends DCLogic {
         badge: 'Thermo-Kool',
         href: 'KoolLogik.dc.html',
         span: 'span 1',
-        coverFull: 'uploads/cooler-2.png',
+        coverFull: 'cooler-2.png',
         noCover: false,
       },
       {
@@ -164,7 +164,7 @@ class Component extends DCLogic {
         badge: 'M.A. thesis',
         href: 'Nura.dc.html',
         span: 'span 1',
-        coverFull: 'uploads/pasted-1783530312936-0.png',
+        coverFull: 'pasted-1783530312936-0.png',
       },
       {
         title: 'Cue',
@@ -174,8 +174,8 @@ class Component extends DCLogic {
         badge: 'Self-directed concept',
         href: 'Cue.dc.html',
         span: 'span 1',
-        cover: 'uploads/pasted-1783528090391-0.png',
-        cover2: 'uploads/pasted-1783528082370-0.png',
+        cover: 'pasted-1783528090391-0.png',
+        cover2: 'pasted-1783528082370-0.png',
         noCover: false,
       },
       {
@@ -186,7 +186,7 @@ class Component extends DCLogic {
         badge: 'Research Lead',
         href: 'SignifyHealth.dc.html',
         span: 'span 1',
-        coverFull: 'uploads/pasted-1783630425342-0.png',
+        coverFull: 'pasted-1783630425342-0.png',
         noCover: false,
       },
     ];

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./vendor/react.production.min.js"></script>
-<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./react.production.min.js"></script>
+<script src="./react-dom.production.min.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -12,14 +12,14 @@
 <helmet>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NURA — Case Study — Dornaz Niknezhad</title>
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
-  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="colors.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="spacing.css">
+  <link rel="stylesheet" href="shadows.css">
+  <link rel="stylesheet" href="radius.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="_ds_bundle.js"></script>
   <style>
     body { margin: 0; background: #ffffff; }
     a { color: var(--link-color); }
@@ -42,7 +42,7 @@
 
 <div style="background:#ffffff;" data-nura-root>
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
 
   <section style="padding: 152px var(--space-8) 0; max-width: 1120px; margin: 0 auto;">
     <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
@@ -65,7 +65,7 @@
         </div>
       </sc-for>
     </div>
-    <div style="margin-top: var(--space-16); aspect-ratio: 3 / 2; border-radius: var(--radius-xl); background: #1a1712 center / cover no-repeat url(uploads/pasted-1783530312936-0.png); border: 1px solid var(--border-subtle);"></div>
+    <div style="margin-top: var(--space-16); aspect-ratio: 3 / 2; border-radius: var(--radius-xl); background: #1a1712 center / cover no-repeat url(pasted-1783530312936-0.png); border: 1px solid var(--border-subtle);"></div>
     <p style="font: var(--text-caption); color: var(--text-tertiary); margin-top: 14px;">Night mode on the phone, glanceable companion on the wrist. The environment is set before the user is even in bed.</p>
   </section>
 
@@ -496,11 +496,11 @@
         <div style="font: var(--text-h3); color: var(--text-primary); margin-bottom: 20px; letter-spacing: -0.01em;">Signify Health: closing the trust gap</div>
         <span style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-body-sm); font-weight: 600; color: var(--text-accent);">View case study &rarr;</span>
       </div>
-      <div style="background: var(--surface-sunken) center / cover no-repeat url(uploads/pasted-1783630425342-0.png); min-height: 200px;"></div>
+      <div style="background: var(--surface-sunken) center / cover no-repeat url(pasted-1783630425342-0.png); min-height: 200px;"></div>
     </a>
   </section>
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
 
 </div>
 </x-dc>

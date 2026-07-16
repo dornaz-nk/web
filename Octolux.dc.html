@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./vendor/react.production.min.js"></script>
-<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./react.production.min.js"></script>
+<script src="./react-dom.production.min.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -12,14 +12,14 @@
 <helmet>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Octolux — Case Study — Dornaz Niknezhad</title>
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
-  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
-  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="colors.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="spacing.css">
+  <link rel="stylesheet" href="shadows.css">
+  <link rel="stylesheet" href="radius.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="_ds_bundle.js"></script>
   <style>
     body { margin: 0; background: #ffffff; }
     a { color: var(--link-color); }
@@ -41,7 +41,7 @@
 
 <div style="background:#ffffff;" data-ox-root="">
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
 
   <section style="padding: 152px var(--space-8) 0; max-width: 1120px; margin: 0 auto;">
     <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
@@ -65,7 +65,7 @@
       </sc-for>
     </div>
     <div style="margin-top: var(--space-16); border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); background: var(--surface-sunken); padding: 40px;">
-      <img src="uploads/pasted-1783546057756-0.png" alt="Octolux OC desktop app beside the award-winning embedded HMI" style="display: block; width: 100%; height: auto;">
+      <img src="pasted-1783546057756-0.png" alt="Octolux OC desktop app beside the award-winning embedded HMI" style="display: block; width: 100%; height: auto;">
     </div>
     <p style="font: var(--text-caption); color: var(--text-tertiary); margin-top: 14px;">The OC desktop configuration app and the embedded Octolux HMI, recognized as the #1 award-winning HMI in its category.</p>
   </section>
@@ -169,7 +169,7 @@
       </div>
     </div>
     <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); background: #0c0d0f;">
-      <img src="uploads/pasted-1783545337965-0.png" alt="OC desktop app on the left and Octolux HMI on the right, running simultaneously" style="display: block; width: 100%; height: auto;">
+      <img src="pasted-1783545337965-0.png" alt="OC desktop app on the left and Octolux HMI on the right, running simultaneously" style="display: block; width: 100%; height: auto;">
     </div>
     <p style="font: var(--text-caption); color: var(--text-tertiary); text-align: center; margin-top: 14px;">OC desktop app on the left, Octolux HMI on the right. Configure on the desktop, operate on the device.</p>
   </section>
@@ -238,11 +238,11 @@
     <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Diagnostics that any team can run.</h2>
     <div class="cs-split" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
       <div>
-        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); background: #0c0d0f;"><img src="uploads/pasted-1783545420592-0.png" alt="IO board diagnostics with digital inputs, outputs, and PWM" style="display: block; width: 100%; height: auto;"></div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); background: #0c0d0f;"><img src="pasted-1783545420592-0.png" alt="IO board diagnostics with digital inputs, outputs, and PWM" style="display: block; width: 100%; height: auto;"></div>
         <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 16px 0 0;">IO board live view: digital inputs and outputs, PWM channels, and fault status, all controllable without firmware support.</p>
       </div>
       <div>
-        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); background: #0c0d0f;"><img src="uploads/pasted-1783545486411-0.png" alt="Diagnostic history log with auto and manual runs" style="display: block; width: 100%; height: auto;"></div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); background: #0c0d0f;"><img src="pasted-1783545486411-0.png" alt="Diagnostic history log with auto and manual runs" style="display: block; width: 100%; height: auto;"></div>
         <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 16px 0 0;">Diagnostic history: auto and manual runs logged with date, type, and summary, so QA can trace every test cycle independently.</p>
       </div>
     </div>
@@ -348,11 +348,11 @@
         <div style="font: var(--text-h3); color: var(--text-primary); margin-bottom: 20px; letter-spacing: -0.01em;">KoolLOGIK: industrial refrigeration, reimagined</div>
         <span style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-body-sm); font-weight: 600; color: var(--text-accent);">View case study &rarr;</span>
       </div>
-      <div style="background: var(--surface-sunken) center / cover no-repeat url(uploads/cooler-2.png); min-height: 200px;"></div>
+      <div style="background: var(--surface-sunken) center / cover no-repeat url(cooler-2.png); min-height: 200px;"></div>
     </a>
   </section>
 
-  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
 
 </div>
 </x-dc>
@@ -521,10 +521,10 @@ class Component extends DCLogic {
         { name: 'Hardware', tag: 'Pre-validated, reusable', items: ['UCB board', 'Temp board', 'I/O board', 'Accelerometer BD', 'Relay BD'], bg: 'var(--surface-card)', border: 'var(--border-subtle)', labelColor: 'var(--text-primary)' },
       ],
       solutions: [
-        { kicker: 'OC, desktop configuration app', title: 'Hardware selection wizard', body: 'Engineers select the hardware they need through a visual grid, with steppers for boards that appear multiple times. A single-step selection replaces hours of manual I/O mapping.', bullets: ['Visual hardware selection, no wiring-diagram lookup', 'Quantity steppers for multi-board configurations', 'Toggle selection for peripheral modules', 'Linear back-and-next wizard flow, error-resistant'], img: 'uploads/pasted-1783546008712-0.png' },
-        { kicker: 'Octolux HMI, embedded interface', title: 'Board diagnostics view', body: 'The most technically complex screen. It surfaces real-time sensor data so QA and manufacturing can act without firmware expertise. A board panel on the left, live grouped data on the right.', bullets: ['Board-level navigation: IO, Temp, Relay, Universal, Accelerometer', 'Grouped sensor panels: NTC, thermocouples, RTC, board temp', 'Color-coded status: green OK, red fault, gray disabled', 'Live update latency of 12ms, real-time without compromise'], img: 'uploads/pasted-1783545350646-0.png' },
-        { kicker: 'Octolux HMI, embedded interface', title: 'Motor control view', body: 'For operators monitoring rotating machinery. Tabbed navigation keeps focus on the relevant system, and a live multi-layer chart surfaces Edge AI patterns before they become failures.', bullets: ['Speed toggle with medium, high, low, glove-compatible targets', 'Six live readouts: RPM, run time, noise, vibration, status, temp', 'Edge AI area chart of sensor patterns over time', 'Alert surface: abnormal vibration detected, inspection recommended'], img: 'uploads/pasted-1783545467987-0.png' },
-        { kicker: 'Octolux HMI, embedded interface', title: 'Cleaning workflow', body: 'Handles maintenance for three cleaning types. Each card shows cycle count, last-cleaned date, a large start button, and a contextual instruction. Maintenance becomes self-serve, no technician needed.', bullets: ['Three cleaning types with distinct instructions', 'Cycle counter and last-cleaned timestamp for scheduling', 'Large centered start button, impossible to miss', 'Contextual warning text explains what will happen'], img: 'uploads/pasted-1783545364409-0.png' },
+        { kicker: 'OC, desktop configuration app', title: 'Hardware selection wizard', body: 'Engineers select the hardware they need through a visual grid, with steppers for boards that appear multiple times. A single-step selection replaces hours of manual I/O mapping.', bullets: ['Visual hardware selection, no wiring-diagram lookup', 'Quantity steppers for multi-board configurations', 'Toggle selection for peripheral modules', 'Linear back-and-next wizard flow, error-resistant'], img: 'pasted-1783546008712-0.png' },
+        { kicker: 'Octolux HMI, embedded interface', title: 'Board diagnostics view', body: 'The most technically complex screen. It surfaces real-time sensor data so QA and manufacturing can act without firmware expertise. A board panel on the left, live grouped data on the right.', bullets: ['Board-level navigation: IO, Temp, Relay, Universal, Accelerometer', 'Grouped sensor panels: NTC, thermocouples, RTC, board temp', 'Color-coded status: green OK, red fault, gray disabled', 'Live update latency of 12ms, real-time without compromise'], img: 'pasted-1783545350646-0.png' },
+        { kicker: 'Octolux HMI, embedded interface', title: 'Motor control view', body: 'For operators monitoring rotating machinery. Tabbed navigation keeps focus on the relevant system, and a live multi-layer chart surfaces Edge AI patterns before they become failures.', bullets: ['Speed toggle with medium, high, low, glove-compatible targets', 'Six live readouts: RPM, run time, noise, vibration, status, temp', 'Edge AI area chart of sensor patterns over time', 'Alert surface: abnormal vibration detected, inspection recommended'], img: 'pasted-1783545467987-0.png' },
+        { kicker: 'Octolux HMI, embedded interface', title: 'Cleaning workflow', body: 'Handles maintenance for three cleaning types. Each card shows cycle count, last-cleaned date, a large start button, and a contextual instruction. Maintenance becomes self-serve, no technician needed.', bullets: ['Three cleaning types with distinct instructions', 'Cycle counter and last-cleaned timestamp for scheduling', 'Large centered start button, impossible to miss', 'Contextual warning text explains what will happen'], img: 'pasted-1783545364409-0.png' },
       ],
       principles: [
         { title: 'Separate complexity from operation', body: 'Configuration complexity belongs on the desktop. The HMI should be focused and fast. The split enforces this at the architecture level.' },
