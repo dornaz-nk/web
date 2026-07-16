@@ -1,0 +1,42 @@
+/* Dornaz Design System — color tokens
+   Reconstructed to match the palette embedded in the portfolio pages
+   (accent #3b6ef6, active #2b54c9, navy ink #101a30 / #16233f, tints #eef3fe). */
+:root {
+  /* Brand blue */
+  --blue-500: #3b6ef6;
+  --accent: #3b6ef6;
+  --accent-active: #2b54c9;
+
+  /* Ink scale (navy neutrals) */
+  --ink-900: #0c0d0f;
+  --ink-800: #101a30;
+  --ink-600: #16233f;
+  --ink-500: #3a4a68;
+  --ink-400: #5a6b86;
+  --ink-300: #8fa6c8;
+  --ink-200: #c7d4ea;
+  --ink-100: #e4eefb;
+
+  /* Text */
+  --text-primary: #101a30;
+  --text-secondary: #4a5a76;
+  --text-tertiary: #8296b5;
+  --text-accent: #3b6ef6;
+  --text-accent-hover: #2b54c9;
+
+  /* Surfaces */
+  --surface-card: #ffffff;
+  --surface-sunken: #f5f7fb;
+  --surface-accent-tint: #eef3fe;
+  --surface-inverse: #101a30;
+
+  /* Borders */
+  --border-subtle: #edf1f7;
+  --border-default: #e2e7f0;
+  --border-strong: #c7d4ea;
+  --border-accent: #3b6ef6;
+
+  /* Links */
+  --link-color: #3b6ef6;
+  --link-hover: #2b54c9;
+}

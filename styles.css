@@ -1,0 +1,32 @@
+/* Dornaz Design System — base styles */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font: var(--text-body);
+  color: var(--text-primary);
+  background: var(--surface-card);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--link-color); text-decoration: none; }
+a:hover { color: var(--link-hover); }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+::selection { background: var(--surface-accent-tint); color: var(--text-accent-hover); }
+
+/* Missing project screenshots degrade to a soft placeholder instead of a
+   broken-image icon, so the layout still reads while real assets are added. */
+img[src^="uploads/"] {
+  background: var(--surface-sunken);
+  min-height: 40px;
+}
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

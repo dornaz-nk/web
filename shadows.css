@@ -1,0 +1,8 @@
+/* Dornaz Design System — elevation tokens */
+:root {
+  --shadow-xs: 0 1px 2px rgba(16, 26, 48, 0.06);
+  --shadow-sm: 0 2px 6px rgba(16, 26, 48, 0.07);
+  --shadow-md: 0 8px 24px rgba(16, 26, 48, 0.09);
+  --shadow-lg: 0 18px 44px rgba(16, 26, 48, 0.12);
+  --shadow-xl: 0 34px 80px rgba(16, 26, 48, 0.16);
+}

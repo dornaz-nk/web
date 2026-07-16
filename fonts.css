@@ -1,0 +1,21 @@
+/* Dornaz Design System — font faces / families
+   Sans (UI + display): Inter.  Serif italic accent: Newsreader.
+   Loaded from Google Fonts; visitors' browsers fetch these directly. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..800;1,14..32,400..600&family=Newsreader:ital,opsz,wght@1,6..72,400..600&display=swap');
+
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+
+  /* Display families */
+  --font-display-xl-family: var(--font-sans);
+  --font-display-xl-weight: 800;
+  --font-display-xl-leading: 1.04;
+
+  --font-display-lg-family: var(--font-sans);
+  --font-display-lg-weight: 800;
+  --font-display-lg-leading: 1.08;
+
+  --font-display-italic-family: var(--font-serif);
+  --font-display-italic-leading: 1.05;
+}
