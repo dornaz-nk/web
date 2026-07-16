@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KoolLOGIK — Case Study — Dornaz Niknezhad</title>
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
+  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: #ffffff; }
+    a { color: var(--link-color); }
+    a:hover { color: var(--link-hover); }
+    @media (max-width: 900px) {
+      .np-card { grid-template-columns: 1fr !important; }
+      .np-card > div:last-child { min-height: 200px !important; order: -1; }
+      .cs-summary { grid-template-columns: 1fr !important; }
+      .cs-stats { grid-template-columns: repeat(2,1fr) !important; }
+      .cs-grid-2 { grid-template-columns: 1fr !important; }
+      .cs-grid-3 { grid-template-columns: 1fr !important; }
+      .cs-grid-4 { grid-template-columns: repeat(2,1fr) !important; }
+      .cs-tiers { grid-template-columns: 1fr !important; }
+      .cs-step { grid-template-columns: 1fr !important; }
+      .cs-two { grid-template-columns: 1fr !important; }
+      .kl-comp { display: block !important; overflow-x: auto; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ffffff; --section-padding-y:{{padY}}; --text-accent:{{aBase}}; --text-accent-hover:{{aDark}}; --accent:{{aBase}}; --accent-active:{{aDark}}; --link-color:{{aBase}}; --link-hover:{{aDark}}; --border-accent:{{aBase}}; --surface-accent-tint:{{aTint}}; --blue-500:{{aBase}}; --font-display-xl-family:{{dispFam}}; --font-display-lg-family:{{dispFam}};" data-kl-root="">
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+
+  <section style="padding: 152px var(--space-8) 0; max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="accent" hint-size="auto,32px">Thermo-Kool</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Safety-critical UX</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Systems design</x-import>
+    </div>
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 24px;">Case study, Tundra &amp; KoolLOGIK</div>
+    <h1 style="font-family: var(--font-display-xl-family); font-weight: var(--font-display-xl-weight); font-size: var(--display-xl-size); line-height: var(--font-display-xl-leading); letter-spacing: -0.02em; color: var(--text-primary); margin: 0; max-width: 940px;">
+      Redesigning safety-critical HMI for commercial refrigeration.
+    </h1>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin-top: 28px; max-width: 660px;">
+      I led end-to-end research and redesign of a high-stakes industrial interface for Thermo-Kool walk-in coolers and freezers. I replaced a memorization-dependent process with a guided setup, designed a tiered alarm system that makes urgency impossible to miss, and laid the foundation for a connected monitoring platform, KoolLOGIK.
+    </p>
+    <div style="display: flex; gap: var(--space-10); margin-top: var(--space-12); flex-wrap: wrap;">
+      <sc-for list="{{meta}}" as="m" hint-placeholder-count="5">
+        <div>
+          <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em;">{{m.label}}</div>
+          <div style="font: var(--text-body); font-weight: 600; color: var(--text-primary); margin-top: 4px;">{{m.value}}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: var(--space-16); border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle);">
+      <img src="uploads/pasted-1783531015382-0.png" alt="KoolLOGIK 7-inch HMI mounted on a Thermo-Kool refrigeration panel" style="display: block; width: 100%; height: auto;">
+    </div>
+    <p style="font: var(--text-caption); color: var(--text-tertiary); margin-top: 14px;">Tundra, the 7″ embedded HMI, mounted in context on a walk-in refrigeration panel.</p>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 24px;">In 30 seconds</div>
+    <div class="cs-summary" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{summary}}" as="s" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">{{s.label}}</div>
+          <p style="font: var(--text-body); color: var(--text-primary); margin: 0;">{{s.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">01 · The challenge</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 20px; letter-spacing: -0.02em; max-width: 820px;">Industrial controls built for experts, used by everyone.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 720px; margin: 0 0 48px;">Technicians spent 60% longer on installations because the interface required memorizing multi-step procedures with no visual guidance. In a commercial kitchen, every minute of failure means thousands of dollars in spoiled inventory.</p>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <sc-for list="{{painPoints}}" as="p" hint-placeholder-count="7">
+          <div style="display: flex; gap: 14px; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+            <span style="color: #DC2626; font-weight: 700; flex-shrink: 0;">✕</span>
+            <span style="font: var(--text-body-sm); color: var(--text-secondary);">{{p}}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup="">60%</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 8px 0 0;">Longer installation time vs. industry benchmark, measured across 8 contextual inquiry sessions.</p>
+        </div>
+        <div style="border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup="">47</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 8px 0 0;">Usability violations found in a heuristic evaluation of the legacy interface against Nielsen's 10 heuristics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">02 · Research and discovery</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">Understanding high-stakes industrial workflows.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">I embedded with technicians in the field before touching a single pixel. Designing a safety-critical interface without witnessing failure modes firsthand is guesswork.</p>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 56px;">
+      <sc-for list="{{methods}}" as="mth" hint-placeholder-count="6">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">{{mth.n}}</div>
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{mth.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{mth.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-left: 3px solid var(--border-accent); padding-left: 24px; max-width: 760px;">
+      <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 8px;">Key insight</div>
+      <p style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 12px; font-weight: 500;">"The system works fine, if you already know how it works."</p>
+      <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">Experienced technicians had built mental models over years. New technicians, increasingly the majority due to labor shortages, had none. The interface assumed expert memory and punished everyone else.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">03 · Problem definition</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Three design challenges, one unified system.</h2>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{problems}}" as="pr" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-h3); color: var(--text-accent); margin-bottom: 12px;">{{pr.n}}</div>
+          <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 12px;">{{pr.title}}</h3>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0 0 18px; font-style: italic;">{{pr.q}}</p>
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 14px;">
+            <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 6px;">Constraint</div>
+            <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{pr.constraint}}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">04 · Setup flow</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">From 10 memorized steps to a guided 5-screen setup.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 40px;">The legacy install was a non-linear menu navigated from memory. I rebuilt it as a linear, progressive wizard that scales from a single-room cooler to an 8-room commercial complex.</p>
+    <div class="cs-two" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 64px;">
+      <div style="border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 16px;">Before · 10 steps</div>
+        <ul style="margin: 0; padding-left: 18px; font: var(--text-body); color: var(--text-secondary); line-height: 1.9;"><li>Power on</li><li>Manual configuration from memory</li><li>Consult printed manual off-site</li><li>Trial and error</li><li>Complete, with no validation</li></ul>
+      </div>
+      <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-accent-tint);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; color: var(--text-accent); margin-bottom: 16px;">After · 4 guided steps</div>
+        <ul style="margin: 0; padding-left: 18px; font: var(--text-body); color: var(--text-primary); line-height: 1.9;"><li>Power on</li><li>Guided wizard with visible progress</li><li>Physical door identification and validation</li><li>Ready, validated at every step</li></ul>
+      </div>
+    </div>
+
+    <div class="cs-step" style="display: grid; grid-template-columns: 320px 1fr; gap: 48px; align-items: center; margin-bottom: 56px;">
+      <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783531008585-0.png" alt="KoolLOGIK welcome and time-estimate setup screen" style="display: block; width: 100%; height: auto;"></div>
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">Step 1 · Welcome and time estimate</div>
+        <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 16px;">Orient the technician immediately.</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 12px;"><strong style="font: var(--text-body-sm); color: var(--text-primary);">System context.</strong> <span style="font: var(--text-body-sm); color: var(--text-secondary);">States exactly what product is being configured, with no ambiguity for multi-brand technicians.</span></div>
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 12px;"><strong style="font: var(--text-body-sm); color: var(--text-primary);">Time estimate.</strong> <span style="font: var(--text-body-sm); color: var(--text-secondary);">"Est. time 3 to 5 min" sets expectations upfront and reduces mid-flow abandonment.</span></div>
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 12px;"><strong style="font: var(--text-body-sm); color: var(--text-primary);">Single action.</strong> <span style="font: var(--text-body-sm); color: var(--text-secondary);">One primary CTA. No menus, no settings. Expert mode and full manual live behind a QR code.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-step" style="display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: center; margin-bottom: 56px;">
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">Step 2 · Configuration model</div>
+        <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 16px;">Start from a template, not a blank slate.</h3>
+        <p style="font: var(--text-body); color: var(--text-secondary); margin: 0 0 20px;">Five pre-built templates cover 90% of real Thermo-Kool installations. Custom configuration is still available for non-standard setups, just not the default path.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <sc-for list="{{setupModels}}" as="sm" hint-placeholder-count="5">
+            <div style="display: flex; gap: 14px; align-items: baseline; border-top: 1px solid var(--border-subtle); padding-top: 10px;">
+              <span style="font: var(--text-caption); font-weight: 700; color: var(--text-accent); flex-shrink: 0;">{{sm.n}}</span>
+              <div><span style="font: var(--text-body-sm); font-weight: 600; color: var(--text-primary);">{{sm.title}}</span> <span style="font: var(--text-body-sm); color: var(--text-secondary);">{{sm.body}}</span></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783531003498-0.png" alt="Choose setup model screen with five configuration templates" style="display: block; width: 100%; height: auto;"></div>
+    </div>
+
+    <div style="margin-bottom: 56px;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">Step 3 · Room count that scales</div>
+      <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 12px;">The same screen, from 1 room to 8.</h3>
+      <p style="font: var(--text-body); color: var(--text-secondary); margin: 0 0 32px; max-width: 700px;">A stepper with a live 3D visualization makes the abstract concrete. The identical interaction handles a single convenience-store cooler and an 8-room kitchen complex, with no separate UI.</p>
+      <div class="cs-two" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 760px; margin: 0 auto;">
+        <div>
+          <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530986440-0.png" alt="Room count stepper set to one room" style="display: block; width: 100%; height: auto;"></div>
+          <p style="font: var(--text-caption); color: var(--text-tertiary); text-align: center; margin-top: 14px;">1 room, the most common small install.</p>
+        </div>
+        <div>
+          <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530994688-0.png" alt="Room count stepper scaled to eight rooms" style="display: block; width: 100%; height: auto;"></div>
+          <p style="font: var(--text-caption); color: var(--text-tertiary); text-align: center; margin-top: 14px;">8 rooms, maximum complexity, same screen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-step" style="display: grid; grid-template-columns: 320px 1fr; gap: 48px; align-items: center; margin-bottom: 56px;">
+      <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530997892-0.png" alt="Name your rooms screen" style="display: block; width: 100%; height: auto;"></div>
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">Step 4 · Name your rooms</div>
+        <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 16px;">Real names make every later screen human.</h3>
+        <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">Technicians name each room before door assignment, so the rest of the flow reads "Back Freezer" and "Walk-In Cooler" instead of abstract labels like "Zone 1". Small change, large drop in downstream confusion.</p>
+      </div>
+    </div>
+
+    <div class="cs-step" style="display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: center; margin-bottom: 56px;">
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">Step 5 · Physical door identification</div>
+        <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 16px;">Open the door. It turns green.</h3>
+        <p style="font: var(--text-body); color: var(--text-secondary); margin: 0 0 20px;">The most innovative step. Instead of specifying which sensor maps to which door, the technician physically opens each door and the indicator turns green in real time, making identification a physical, unambiguous act.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{doorBullets}}" as="b" hint-placeholder-count="4">
+            <div style="display: flex; gap: 14px; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+              <span style="color: #22C55E; font-weight: 700; flex-shrink: 0;">✓</span>
+              <span style="font: var(--text-body-sm); color: var(--text-secondary);">{{b}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530980618-0.png" alt="Door assignment screen with Door 1 detected open and highlighted green" style="display: block; width: 100%; height: auto;"></div>
+    </div>
+
+    <div style="max-width: 720px; margin: 0 auto 40px 0; text-align: left;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">Step 6 · Validation</div>
+      <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 12px;">Verify, then confirm.</h3>
+      <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">Automated sensor verification runs in the background with per-room status, so technicians see exactly what passed. A clear success state confirms what was configured, then hands off to the live KoolLOGIK dashboard.</p>
+    </div>
+    <div style="display: flex; gap: 32px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+      <div style="width: 280px; max-width: 100%; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530973150-0.png" alt="System validation screen showing 54 percent with per-room checks" style="display: block; width: 100%; height: auto;"></div>
+      <div style="width: 280px; max-width: 100%; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="./setup-wizard-design-1--mrcjwsx0.png" alt="Setup complete screen showing 6 rooms active and 8 doors connected" style="display: block; width: 100%; height: auto;"></div>
+    </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">05 · Dashboard</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Organized by operational priority, not by menu.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 40px;">Once setup is done, technicians and kitchen managers use KoolLOGIK daily. The dashboard prioritizes instant status recognition over information density, because in a commercial kitchen you need answers in seconds, not minutes.</p>
+    <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); background: #101418; margin-bottom: 16px;">
+      <img src="uploads/pasted-1783530937086-0.png" alt="KoolLOGIK dashboard shown across four room configurations" style="display: block; width: 100%; height: auto;">
+    </div>
+    <p style="font: var(--text-caption); color: var(--text-tertiary); text-align: center; margin: 0 0 56px;">The dashboard across four configurations, from a single cooler to a multi-zone commercial installation.</p>
+    <div class="cs-two" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 56px;">
+      <div>
+        <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530944675-0.png" alt="KoolLOGIK normal operational state, all green" style="display: block; width: 100%; height: auto;"></div>
+        <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 24px 0 8px; text-align: center;">Normal state</h4>
+        <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0 auto; max-width: 320px; text-align: center;">Green indicators throughout and a neutral card border communicate "all is well" without asking the user to decode anything.</p>
+      </div>
+      <div>
+        <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530949775-0.png" alt="KoolLOGIK active condition, door open and light on in amber" style="display: block; width: 100%; height: auto;"></div>
+        <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 24px 0 8px; text-align: center;">Active condition</h4>
+        <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0 auto; max-width: 320px; text-align: center;">Back Freezer shows door open and light on in amber. The condition draws attention without triggering a full alarm.</p>
+      </div>
+    </div>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{dashPoints}}" as="dp" hint-placeholder-count="3">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 18px;">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{dp.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{dp.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">06 · Alarm hierarchy</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Urgency you recognize before you read a word.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">The legacy interface showed every alarm identically. A compressor failure and a door-ajar notice were visually indistinguishable. I rebuilt alarms as a four-tier hierarchy reinforced through color, border weight, typography, iconography, and sound at once.</p>
+    <div class="cs-tiers" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 56px;">
+      <sc-for list="{{tiers}}" as="t" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-card);">
+          <div style="height: 6px; background: {{t.color}};"></div>
+          <div style="padding: 24px 22px;">
+            <div style="font: var(--text-caption); font-weight: 700; letter-spacing: 0.06em; color: {{t.color}}; margin-bottom: 10px;">{{t.tag}}</div>
+            <div style="font: var(--text-h4); color: var(--text-primary); margin-bottom: 8px;">{{t.name}}</div>
+            <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0 0 14px;">{{t.body}}</p>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <sc-for list="{{t.examples}}" as="ex" hint-placeholder-count="3">
+                <span style="font: var(--text-caption); color: var(--text-tertiary); border-top: 1px solid var(--border-subtle); padding-top: 6px;">{{ex}}</span>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div class="cs-two" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 48px;">
+      <div>
+        <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="./t0-mrckl6iw.png" alt="Warning state, door open and light on shown in amber" style="display: block; width: 100%; height: auto;"></div>
+        <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 24px 0 8px; text-align: center;">Warning state</h4>
+        <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0 auto; max-width: 320px; text-align: center;">An amber border and a chime flag a door left open or a rising temperature. Attention is needed, but it is not yet an emergency.</p>
+      </div>
+      <div>
+        <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530957073-0.png" alt="Critical alarm state, Back Freezer card fully red" style="display: block; width: 100%; height: auto;"></div>
+        <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 24px 0 8px; text-align: center;">Critical state</h4>
+        <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0 auto; max-width: 320px; text-align: center;">The whole room card turns red, a critical badge appears, and the temperature is displayed large, the data that matters most when food safety is at risk.</p>
+      </div>
+      <div>
+        <div style="max-width: 300px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg); background: #1a1a1a;"><img src="uploads/pasted-1783530962293-0.png" alt="Panic alarm full-screen overlay with countdown and Clear Panic action" style="display: block; width: 100%; height: auto;"></div>
+        <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 24px 0 8px; text-align: center;">Panic alarm</h4>
+        <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0 auto; max-width: 320px; text-align: center;">A manual emergency trigger takes over the full screen with a countdown and a single "Clear Panic" action. No navigation is possible until it is acknowledged.</p>
+      </div>
+    </div>
+    <div style="border-left: 3px solid var(--border-accent); padding-left: 24px; max-width: 760px;">
+      <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 8px;">Design rationale, color language</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0;">The system uses a traffic-light convention, blue for information, amber for caution, red for danger, so technicians interpret it correctly on first contact with no training. Color is never the sole signal: each tier also carries a distinct border weight, type scale, icon, and sound, for accessibility in loud, bright kitchens.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">07 · Design system</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">A language that reads as authority and precision.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">The interface had to feel industrial and exact, while staying usable by technicians who touch it infrequently and often under stress.</p>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+      <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 18px;">Color</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <sc-for list="{{dsColors}}" as="c" hint-placeholder-count="6">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 28px; height: 28px; border-radius: 8px; background: {{c.hex}}; border: 1px solid rgba(0,0,0,0.12); display: inline-block;"></span>
+              <div><div style="font: var(--text-caption); color: var(--text-primary); font-weight: 600;">{{c.name}}</div><div style="font: var(--text-caption); color: var(--text-tertiary);">{{c.hex}}</div></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: #1a1a1a; display: flex; flex-direction: column; justify-content: center;">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #8a8a8a; margin-bottom: 12px;">Typography</div>
+        <div style="color: #ffffff; font-family: Manrope, system-ui, sans-serif; font-size: 56px; font-weight: 700; line-height: 1;">36°F</div>
+        <div style="color: #ffffff; font-family: Manrope, system-ui, sans-serif; font-size: 20px; font-weight: 600; margin-top: 6px;">Back Freezer</div>
+        <div style="color: #8a8a8a; font-family: Manrope, system-ui, sans-serif; font-size: 12px; letter-spacing: 0.08em; margin-top: 6px;">DOOR CLOSED · LIGHT OFF</div>
+        <p style="font: var(--text-caption); color: #6f6f6f; margin: 16px 0 0;">Temperature is set at maximum size, the primary data a technician needs from three feet away.</p>
+      </div>
+    </div>
+    <div class="cs-grid-4" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-bottom: 40px;">
+      <sc-for list="{{components}}" as="cp" hint-placeholder-count="4">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 16px;">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{cp.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{cp.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div class="cs-grid-4" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;">
+      <sc-for list="{{principles}}" as="pn" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 20px; background: var(--surface-card);">
+          <p style="font: var(--text-body-sm); color: var(--text-primary); margin: 0;"><strong>{{pn.title}}.</strong> <span style="color: var(--text-secondary);">{{pn.body}}</span></p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">08 · Usability testing and iteration</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Two rounds. The setup flow was harder than expected.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">The sharpest insights came from the door identification step and the alarm hierarchy, the two places where the redesign departed most boldly from the legacy system.</p>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 56px;">
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 16px;">What was tested</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{tested}}" as="t" hint-placeholder-count="6"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-subtle); padding-top: 12px;">{{t}}</p></sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #C2410C; margin-bottom: 16px;">Issues found</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{issues}}" as="i" hint-placeholder-count="6"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-subtle); padding-top: 12px;">{{i}}</p></sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 16px;">Iterations made</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{iterations}}" as="it" hint-placeholder-count="6"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-subtle); padding-top: 12px;">{{it}}</p></sc-for>
+        </div>
+      </div>
+    </div>
+    <div class="cs-two" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+      <sc-for list="{{rounds}}" as="rd" hint-placeholder-count="2">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 16px;">{{rd.label}}</div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div><div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.06em;">Participants</div><p style="font: var(--text-body-sm); color: var(--text-primary); margin: 2px 0 0;">{{rd.participants}}</p></div>
+            <div><div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.06em;">Format</div><p style="font: var(--text-body-sm); color: var(--text-primary); margin: 2px 0 0;">{{rd.format}}</p></div>
+            <div><div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.06em;">Key finding</div><p style="font: var(--text-body-sm); color: var(--text-primary); margin: 2px 0 0;">{{rd.finding}}</p></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-accent-tint); margin-bottom: 56px; max-width: 860px;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">Critical testing insight</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0;">The door identification step was the most innovative and the most confusing in round one. The concept was right; the language was wrong. Switching from sensor terminology to a direct instruction, "open Door 1 to identify it", resolved all confusion in round two. Clever UX still needs clear language to work.</p>
+    </div>
+    <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 24px;">Measured impact</h3>
+    <div class="cs-stats" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 24px;">
+      <sc-for list="{{impactStats}}" as="im" hint-placeholder-count="4">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 20px;">
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup="">{{im.value}}</div>
+          <div style="font: var(--text-body); font-weight: 600; color: var(--text-primary); margin-top: 8px;">{{im.title}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 6px 0 0;">{{im.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">09 · Future vision</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">From embedded HMI to connected refrigeration platform.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">Every naming decision, data structure, and UI pattern was built to translate cleanly to web and mobile, not just the embedded touchscreen. The HMI is the foundation for a broader platform.</p>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-bottom: 56px;">
+      <sc-for list="{{futureFeatures}}" as="ff" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{ff.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{ff.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div class="cs-grid-4" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;">
+      <sc-for list="{{roadmap}}" as="rm" hint-placeholder-count="4">
+        <div style="border-top: 3px solid var(--border-accent); padding-top: 16px;">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 8px;">{{rm.phase}}</div>
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 6px;">{{rm.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{rm.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">10 · Business impact</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 820px;">Value for three stakeholders at once.</h2>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 56px;">
+      <sc-for list="{{stakeholders}}" as="sh" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card); display: flex; flex-direction: column;">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 4px;">{{sh.group}}</div>
+          <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 16px;">{{sh.name}}</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+            <sc-for list="{{sh.points}}" as="pt" hint-placeholder-count="4"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-subtle); padding-top: 10px;">{{pt}}</p></sc-for>
+          </div>
+          <div style="margin-top: 20px; border-top: 1px solid var(--border-default); padding-top: 16px;">
+            <div style="font: var(--text-stat); color: var(--text-accent); letter-spacing: -0.02em;" data-countup="">{{sh.stat}}</div>
+            <div style="font: var(--text-caption); color: var(--text-tertiary); margin-top: 4px;">{{sh.statLabel}}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-left: 3px solid var(--border-accent); padding-left: 24px; max-width: 760px; margin-bottom: 40px;">
+      <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 8px;">Broader implication</div>
+      <p style="font: var(--text-h4); color: var(--text-primary); margin: 0; font-weight: 500;">Industrial UX is safety UX. Refrigeration failure is not an inconvenience, it is a food-safety event, and an alarm no one can decode in five seconds is a liability.</p>
+    </div>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{standards}}" as="st" hint-placeholder-count="3">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 18px;">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{st.name}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{st.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">11 · Success metrics and KPIs</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Measured across installation, safety, and business.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">Each KPI traces to a design decision. Setup completion validates the guided wizard. Alarm-recognition speed validates the tiered color system. Service-call reduction validates contextual help and progressive disclosure.</p>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 48px;">
+      <sc-for list="{{kpiGroups}}" as="g" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 18px;">{{g.title}}</div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <sc-for list="{{g.rows}}" as="k" hint-placeholder-count="4">
+              <div style="border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+                <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+                  <span style="font: var(--text-body-sm); color: var(--text-secondary);">{{k.label}}</span>
+                  <span style="font: var(--text-body); font-weight: 700; color: var(--text-primary); white-space: nowrap;">{{k.actual}}</span>
+                </div>
+                <div style="font: var(--text-caption); color: var(--text-tertiary); margin-top: 2px;">Target {{k.target}}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div class="cs-two" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <sc-for list="{{validationPhases}}" as="vp" hint-placeholder-count="2">
+        <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-accent-tint);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 16px;">{{vp.title}}</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <sc-for list="{{vp.steps}}" as="sp" hint-placeholder-count="4"><p style="font: var(--text-body-sm); color: var(--text-primary); margin: 0; border-top: 1px solid rgba(59,110,246,0.16); padding-top: 10px;">{{sp}}</p></sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">12 · Reflections</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 820px;">Designing for expertise without requiring it.</h2>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 56px;">
+      <div>
+        <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 16px;">What worked</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{worked}}" as="w" hint-placeholder-count="5"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-default); padding-top: 12px;">{{w}}</p></sc-for>
+        </div>
+      </div>
+      <div>
+        <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 16px;">What I'd do differently</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{differently}}" as="df" hint-placeholder-count="4"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-default); padding-top: 12px;">{{df}}</p></sc-for>
+        </div>
+      </div>
+    </div>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;">
+      <sc-for list="{{keyPrinciples}}" as="kp" hint-placeholder-count="4">
+        <div style="border-left: 3px solid var(--border-accent); padding-left: 20px;">
+          <p style="font: var(--text-body); color: var(--text-primary); margin: 0;">{{kp}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 800px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <p style="font-family: var(--font-display-italic-family); font-style: italic; font-size: var(--display-italic-size); line-height: var(--font-display-italic-leading); color: var(--text-primary); margin: 0;">
+      "The most valuable outcome was not fewer clicks. It was less uncertainty."
+    </p>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--space-16); max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin: var(--section-padding-y) 0 40px;">
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="accent" hint-size="auto,32px">Embedded HMI</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Industrial IoT</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Safety-critical UX</x-import>
+    </div>
+    <a href="Nura.dc.html" class="np-card" style="display: grid; grid-template-columns: 1fr 300px; align-items: stretch; border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); overflow: hidden; text-decoration: none; color: inherit; background: var(--surface-card); box-shadow: var(--shadow-xs); transition: box-shadow 0.25s ease, transform 0.25s ease;" style-hover="box-shadow: var(--shadow-lg); transform: translateY(-4px);">
+      <div style="padding: 40px 44px;">
+        <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">Next case study</div>
+        <div style="font: var(--text-h3); color: var(--text-primary); margin-bottom: 20px; letter-spacing: -0.01em;">NURA: a connected sleep ecosystem</div>
+        <span style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-body-sm); font-weight: 600; color: var(--text-accent);">View case study &rarr;</span>
+      </div>
+      <div style="background: var(--surface-sunken) center / cover no-repeat url(uploads/pasted-1783530312936-0.png); min-height: 200px;"></div>
+    </a>
+  </section>
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:[&quot;#3B6EF6&quot;,&quot;#2B54C9&quot;,&quot;#EEF3FE&quot;],&quot;options&quot;:[[&quot;#3B6EF6&quot;,&quot;#2B54C9&quot;,&quot;#EEF3FE&quot;],[&quot;#00AAFF&quot;,&quot;#0077B3&quot;,&quot;#E5F6FF&quot;],[&quot;#2F7D5B&quot;,&quot;#245F45&quot;,&quot;#EAF4EF&quot;],[&quot;#475569&quot;,&quot;#334155&quot;,&quot;#EEF1F5&quot;]],&quot;tsType&quot;:&quot;string[]&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Compact&quot;,&quot;options&quot;:[&quot;Editorial&quot;,&quot;Compact&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;headingStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Editorial serif&quot;,&quot;options&quot;:[&quot;Editorial serif&quot;,&quot;Industrial sans&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    try {
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const root = document.querySelector('[data-kl-root]') || document;
+      const countUp = (el) => {
+        const raw = el.getAttribute('data-countup-raw') || el.textContent;
+        el.setAttribute('data-countup-raw', raw);
+        const nums = raw.match(/\d[\d,\.]*/g);
+        if (!nums || nums.length !== 1) return;
+        const numStr = nums[0];
+        const target = parseFloat(numStr.replace(/,/g, ''));
+        if (!isFinite(target)) return;
+        const isFloat = numStr.indexOf('.') >= 0;
+        const dur = 1200, t0 = performance.now();
+        const tick = (now) => {
+          const p = Math.min(1, (now - t0) / dur);
+          const e = 1 - Math.pow(1 - p, 3);
+          const cur = isFloat ? (target * e).toFixed(1) : Math.round(target * e).toLocaleString();
+          el.textContent = raw.replace(numStr, cur);
+          if (p < 1) requestAnimationFrame(tick); else el.textContent = raw;
+        };
+        requestAnimationFrame(tick);
+      };
+      const sections = Array.prototype.slice.call(root.querySelectorAll('section'));
+      if (reduce || !('IntersectionObserver' in window)) return;
+      sections.forEach((s) => {
+        s.style.opacity = '0';
+        s.style.transform = 'translateY(28px)';
+        s.style.transition = 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+        s.style.willChange = 'opacity, transform';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.style.opacity = '1';
+            en.target.style.transform = 'none';
+            const stats = en.target.querySelectorAll('[data-countup]');
+            for (let i = 0; i < stats.length; i++) countUp(stats[i]);
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+      sections.forEach((s) => io.observe(s));
+      setTimeout(() => {
+        sections.forEach((s) => {
+          if (getComputedStyle(s).opacity === '0') {
+            s.style.opacity = '1';
+            s.style.transform = 'none';
+            const stats = s.querySelectorAll('[data-countup]');
+            for (let i = 0; i < stats.length; i++) countUp(stats[i]);
+          }
+        });
+      }, 700);
+    } catch (e) { /* fail open, content stays visible */ }
+  }
+  renderVals() {
+    const acc = Array.isArray(this.props.accent) ? this.props.accent : ['#3B6EF6', '#2B54C9', '#EEF3FE'];
+    const aBase = acc[0] || '#3B6EF6';
+    const aDark = acc[1] || aBase;
+    const aTint = acc[2] || '#EEF3FE';
+    const padY = (this.props.density === 'Compact') ? '80px' : '128px';
+    const dispFam = (this.props.headingStyle === 'Industrial sans') ? "'Manrope', system-ui, -apple-system, sans-serif" : "'Newsreader', 'Times New Roman', Georgia, serif";
+    return {
+      aBase, aDark, aTint, padY, dispFam,
+      navLinks: [
+        { label: 'Home', href: 'Home.dc.html' },
+        { label: 'About', href: 'About.dc.html' },
+      ],
+      footerLinks: [
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dornaz-niknezhad/', icon: 'linkedin' },
+        { label: 'GitHub', href: 'https://github.com/dornaz-nk', icon: 'github' },
+      ],
+      meta: [
+        { label: 'Role', value: 'Lead product designer, research to prototype' },
+        { label: 'Timeline', value: '16 weeks, 2024' },
+        { label: 'Team', value: 'Thermo-Kool, via NTX Embedded' },
+        { label: 'Platform', value: '7\u2033 embedded touchscreen HMI' },
+        { label: 'Tools', value: 'Figma, contextual inquiry, prototype' },
+      ],
+      summary: [
+        { label: 'Problem', body: 'The legacy HMI assumed technicians already knew complex procedures. Setup leaned on memory and printed manuals, which made onboarding hard and errors common.' },
+        { label: 'Solution', body: 'A guided setup wizard with physical door identification, a card-based dashboard organized by priority, and a four-tier alarm hierarchy communicated through color, motion, and sound.' },
+        { label: 'Result', body: 'Setup dropped from ten steps to four. Unassisted completion rose from 33% to 88% and task success reached 92% in usability testing.' },
+      ],
+      painPoints: [
+        '10-step installation with no visual guidance or progress indication',
+        'Critical alarms looked identical to minor informational warnings',
+        'No contextual help, technicians left the job site to reference paper manuals',
+        'Error recovery required restarting the entire process from step one',
+        'Inconsistent terminology and label language across screens',
+        'No way to monitor refrigeration remotely, only physical on-site checks',
+        'Setup could not scale, the same confusing flow for 1-room and 8-room jobs',
+      ],
+      methods: [
+        { n: '8 sessions', title: 'Contextual inquiry', body: 'Shadowed HVAC/R technicians during live installations and emergency visits across the DFW area.' },
+        { n: '12 workflows', title: 'Task analysis', body: 'Mapped every critical workflow from first-boot setup to emergency alarm response, with decision points and failure modes.' },
+        { n: '47 issues', title: 'Heuristic evaluation', body: 'Applied Nielsen\u2019s 10 heuristics to the legacy interface, scoring severity and frequency for each violation.' },
+        { n: '6 interviews', title: 'Stakeholder interviews', body: 'Spoke with Thermo-Kool product and field-service managers about constraints, liability, and rollout timelines.' },
+        { n: '5 systems', title: 'Competitive analysis', body: 'Benchmarked Hussmann, Tyler, Copeland, Emerson, and Danfoss for alarm hierarchy and setup patterns.' },
+        { n: '6 months', title: 'Error-log analysis', body: 'Reviewed service-call logs to see which alarm types most often required an on-site dispatch versus remote resolution.' },
+      ],
+      problems: [
+        { n: '01', title: 'Setup complexity', q: '"How do we make multi-room, multi-door configuration feel simple without removing configurability?"', constraint: 'Must support 1 to 8 rooms, 1 to 8 doors, and custom non-standard installations.' },
+        { n: '02', title: 'Alarm legibility', q: '"How do we make alarm urgency instantly recognizable in a loud, bright, high-stress kitchen?"', constraint: 'Must communicate severity within one second of glance, even for a first-time user.' },
+        { n: '03', title: 'Remote awareness', q: '"How do we extend the value of the HMI beyond the physical touchscreen?"', constraint: 'Must work with existing Thermo-Kool hardware, no extra sensors or network infrastructure.' },
+      ],
+      setupModels: [
+        { n: '1', title: 'Single room, single door.', body: 'Most common small restaurant install.' },
+        { n: '2', title: 'Single room, dual door.', body: 'Pass-through cooler configurations.' },
+        { n: '3', title: 'Dual zone, dual door.', body: 'Cooler and freezer combinations.' },
+        { n: '4', title: 'Dual zone, triple door.', body: 'High-traffic restaurant configurations.' },
+        { n: '5', title: 'Custom configuration.', body: 'Manual setup for complex or non-standard installs.' },
+      ],
+      doorBullets: [
+        'Eliminates wiring-diagram lookup, no manual cross-referencing',
+        'Green indicator gives immediate physical confirmation of detection',
+        'The "from to" assignment reuses the room names from the previous step',
+        'Master-controller designation is handled inline, no separate settings screen',
+      ],
+      dashPoints: [
+        { title: 'Room-level cards', body: 'Each room is a full-width card showing temperature, door status, light status, and humidity at a glance. The featured room expands at the top; swipe to switch.' },
+        { title: 'Live status indicators', body: 'Color-coded chips show door and light states. Amber marks an active condition, drawing attention without triggering an alarm.' },
+        { title: 'Scrollable room list', body: 'A compact list of all rooms allows quick navigation across the whole installation without leaving the primary view.' },
+      ],
+      tiers: [
+        { name: 'Info', tag: 'Tier 1', body: 'System notifications that need no immediate action, shown as inline status with a blue indicator.', color: '#2563EB', examples: ['Maintenance due in 30 days', 'Calibration completed', 'Firmware update available'] },
+        { name: 'Warning', tag: 'Tier 2', body: 'Needs attention but not immediate intervention. Amber border and an audible chime.', color: '#D97706', examples: ['Temperature trending up, still safe', 'Door ajar over 5 minutes', 'Humidity above threshold'] },
+        { name: 'Critical', tag: 'Tier 3', body: 'Immediate action required. The card turns red with a pulsing border and a continuous alarm.', color: '#DC2626', examples: ['Temperature above safe zone', 'Compressor failure detected', 'Sensor connection lost'] },
+        { name: 'Panic', tag: 'Tier 4', body: 'A manual emergency trigger. Full-screen takeover with a countdown and a single clear action.', color: '#7F1D1D', examples: ['Manual emergency trigger', 'Full-screen, no navigation', 'Forces acknowledgment'] },
+      ],
+      dsColors: [
+        { name: 'Background', hex: '#1A1A1A' },
+        { name: 'Surface', hex: '#2A2A2A' },
+        { name: 'Accent blue', hex: '#00AAFF' },
+        { name: 'Safe green', hex: '#22C55E' },
+        { name: 'Warning amber', hex: '#F59E0B' },
+        { name: 'Critical red', hex: '#DC2626' },
+      ],
+      components: [
+        { title: 'Room card', body: 'Temperature (large), name, status chips, humidity. Swipeable, full-width. Border color signals alarm state.' },
+        { title: 'Status chip', body: 'Compact door and light indicator. Amber for active, neutral for normal. Never red, red is reserved for alarms.' },
+        { title: 'Setup step', body: 'Full-screen card with one primary action. Illustration zone at top for spatial context, progress dots at bottom.' },
+        { title: 'Alarm banner', body: 'Sticks to the top of the screen. Fill matches the alarm tier. Dismissal requires explicit action.' },
+      ],
+      principles: [
+        { title: 'Dark-first', body: 'Built for bright kitchens where screen glare is constant.' },
+        { title: 'Glanceable', body: 'Most critical info readable in under a second from three feet away.' },
+        { title: 'Touch-first', body: 'All tap targets at least 48 by 48px, glove-compatible.' },
+        { title: 'Error-resistant', body: 'Destructive actions confirm; alarms require explicit dismissal.' },
+      ],
+      tested: [
+        'Setup completion, could a first-timer reach "setup complete" unassisted?',
+        'Door identification, did open-to-detect feel intuitive or confusing?',
+        'Room naming, did naming before assigning doors reduce downstream confusion?',
+        'Alarm recognition speed, how fast did people read severity tier?',
+        'Dashboard glanceability, readable within two seconds from three feet?',
+        'Manual vs. guided setup, which did technicians choose when free to pick?',
+      ],
+      issues: [
+        'Door instruction was too technical, "sensor detects open state" confused users',
+        'Room stepper had no upper bound, people kept tapping expecting more',
+        'Validation did not show which rooms were still pending, causing anxiety',
+        'Red was used for both critical and panic tiers, the distinction was unclear',
+        '"Custom configuration" caused hesitation, people feared picking it by mistake',
+        'Dashboard swipe was not discoverable, no visual affordance',
+      ],
+      iterations: [
+        'Rewrote the door step to plain language: "open each door, it turns green when detected"',
+        'Added a "1 to 8 rooms" range label and disabled the plus button at maximum',
+        'Validation now shows per-room rows with checkmarks and a spinner for in-progress',
+        'Gave panic a distinct full-screen takeover, no longer adjacent to the critical card',
+        'Moved custom configuration to the bottom of the list, visually de-emphasized',
+        'Added dot pagination and a swipe-hint animation on first dashboard load',
+      ],
+      rounds: [
+        { label: 'Round 1 · low fidelity', participants: '6 HVAC/R technicians, 2 kitchen managers', format: 'Moderated in-person, paper plus clickable Figma prototype', finding: 'Door identification caused a complete stop for 4 of 6 technicians, so it was prioritized for redesign.' },
+        { label: 'Round 2 · high fidelity', participants: '8 HVAC/R technicians, 3 new and 5 returning', format: 'Unmoderated remote, think-aloud protocol', finding: 'Setup completion rose from 33% to 88% after the door instruction was rewritten.' },
+      ],
+      impactStats: [
+        { value: '60%', title: 'Faster installation', body: 'Average time down from about 45 minutes to about 18 in testing.' },
+        { value: '92%', title: 'Task success rate', body: 'Up from 67% with the legacy interface across setup and alarm tasks.' },
+        { value: '4.6/5', title: 'Satisfaction (SUS)', body: 'Equivalent to the "excellent" range for an industrial HMI.' },
+        { value: '< 1s', title: 'Alarm recognition', body: 'All participants read alarm severity correctly within one second.' },
+      ],
+      futureFeatures: [
+        { title: 'Remote monitoring dashboard', body: 'A web dashboard for operators and service managers to monitor every location from one interface, without on-site status checks.' },
+        { title: 'Mobile alarm notifications', body: 'Push alerts for critical and panic alarms, routed to the right on-call technician or manager even when no one is present.' },
+        { title: 'Predictive maintenance', body: 'Models trained on temperature-trend data to predict compressor failures 48 to 72 hours ahead, enabling proactive dispatch.' },
+        { title: 'Service history and diagnostics', body: 'Automated service logs generated from alarm events, closing the information gap between technician visits.' },
+      ],
+      roadmap: [
+        { phase: 'Phase 1 · now', title: 'Embedded HMI', body: 'KoolLOGIK 7\u2033 touchscreen for setup, monitoring, and alarms.' },
+        { phase: 'Phase 2 · 6 mo', title: 'Mobile companion', body: 'iOS and Android app for alarm notifications and remote status.' },
+        { phase: 'Phase 3 · 12 mo', title: 'Web dashboard', body: 'Multi-location operator dashboard for chains and service companies.' },
+        { phase: 'Phase 4 · 18 mo', title: 'Predictive platform', body: 'ML-powered predictive maintenance and automated dispatch.' },
+      ],
+      stakeholders: [
+        { group: 'Product manufacturer', name: 'Thermo-Kool', points: ['Install time cut 60%, directly lowering labor cost per deployment', 'Service-call volume projected to fall as alarm triage becomes self-service', 'A competitive differentiator vs. Hussmann and Tyler', 'Platform foundation enables a SaaS remote-monitoring revenue stream'], stat: '35%', statLabel: 'Projected service-call reduction' },
+        { group: 'Primary users', name: 'HVAC/R technicians', points: ['Unassisted setup completion up from 33% to 88%', 'Alarm severity identifiable in under one second', 'Error recovery no longer requires a full restart', 'Physical door detection removes wiring-diagram lookups'], stat: '88%', statLabel: 'Setup completion without assistance' },
+        { group: 'End beneficiaries', name: 'Restaurant operators', points: ['Faster critical-alarm recognition shortens the response window', 'The panic flow gives a clear action path during emergencies', 'Room naming lets operators self-triage basic issues', 'Less downtime translates directly to revenue protection'], stat: '$8K–$50K', statLabel: 'Avg. spoilage cost per failure event' },
+      ],
+      standards: [
+        { name: 'FDA Food Code 2022', body: 'Cold storage must stay at or below 41\u00b0F. Every hour above threshold is a regulatory event.' },
+        { name: 'ASHRAE Standard 15', body: 'Refrigeration safety codes require accessible emergency shutoffs and legible status displays.' },
+        { name: 'ADA Title III', body: 'Accessibility standards drove the 48px touch targets and high-contrast alarm colors.' },
+      ],
+      kpiGroups: [
+        { title: 'Installation performance', rows: [
+          { label: 'Setup completion rate', target: '\u2265 85%', actual: '88%' },
+          { label: 'Time to operational', target: '\u2264 20 min', actual: '18 min' },
+          { label: 'Unassisted completion', target: '\u2265 80%', actual: '88%' },
+          { label: 'Error-recovery events', target: '\u2264 1 / install', actual: '0.4' },
+        ] },
+        { title: 'Operational safety', rows: [
+          { label: 'Severity recognition', target: '\u2264 1s', actual: '0.8s' },
+          { label: 'Critical response time', target: '\u2264 3 min', actual: '2.1 min' },
+          { label: 'Misclassification rate', target: '0%', actual: '0%' },
+          { label: 'Panic false triggers', target: '\u2264 0.5%', actual: 'Field TBD' },
+        ] },
+        { title: 'Business health', rows: [
+          { label: 'Service-call reduction', target: '-35%', actual: 'Projected' },
+          { label: 'Technician satisfaction', target: '\u2265 50', actual: '4.6/5' },
+          { label: 'Competitive win rate', target: '+15%', actual: 'Tracking' },
+          { label: 'Remote-monitoring adoption', target: '60% yr 1', actual: 'Platform TBD' },
+        ] },
+      ],
+      validationPhases: [
+        { title: 'Phase 1 · controlled field pilot, 0 to 90 days', steps: ['Deploy across 12 Thermo-Kool installations in the DFW area', 'Embed timing instrumentation for automatic install-time capture', 'Log all alarm events with response timestamps', 'Collect technician satisfaction at the end of each install'] },
+        { title: 'Phase 2 · broad rollout, 90 to 180 days', steps: ['Scale to all new Thermo-Kool installations nationwide', 'Compare service-call rates against legacy deployments', 'Begin the connected-platform beta for select operators', 'Re-survey satisfaction at six months'] },
+      ],
+      worked: [
+        'Progressive disclosure kept setup clean, hiding complexity behind a single custom escape hatch',
+        'Physical door identification eliminated the hardest cognitive step in the legacy flow',
+        'The color-coded alarm hierarchy made severity instantly recognizable, even for first-timers',
+        'Naming rooms before assigning doors made every later screen more human',
+        'A QR code to the manual handled edge cases without bloating the primary flow',
+      ],
+      differently: [
+        'Earlier stakeholder alignment on the platform roadmap, some setup decisions predated the mobile vision',
+        'More testing with kitchen managers, they use alarms daily but were underrepresented',
+        'Prototype the panic flow earlier, its interaction complexity surfaced late',
+        'Explore haptic feedback, glove use makes visual-only alarm signals insufficient',
+      ],
+      keyPrinciples: [
+        'Design for the least experienced user in the room. Experts adapt; novices cannot.',
+        'In safety-critical systems, clarity is a safety feature. Ambiguity costs money and endangers the food supply.',
+        'Guided flows are not simplification, they are respect for the user\u2019s cognitive load under stress.',
+        'The physical world and the interface must speak the same language, hence open-to-detect door identification.',
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

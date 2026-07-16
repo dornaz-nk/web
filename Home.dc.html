@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dornaz Niknezhad — Product &amp; UX Designer</title>
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
+  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: #ffffff; }
+    a { color: var(--link-color); }
+    a:hover { color: var(--link-hover); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 900px) {
+      .home-hero-title { font-size: clamp(2.4rem, 7vw, 3.4rem) !important; }
+      .home-grid { grid-template-columns: 1fr !important; }
+      .home-about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    }
+  </style>
+</helmet>
+
+<div id="top" style="background:#ffffff;">
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+
+  <section style="padding: 168px var(--space-8) 120px; max-width: 1120px; margin: 0 auto;">
+    <div style="animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) both;">
+      <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 28px;">
+        Product &amp; UX Designer — Dallas, TX
+      </div>
+      <h1 class="home-hero-title" style="font-family: var(--font-display-xl-family); font-weight: var(--font-display-xl-weight); font-size: var(--display-xl-size); line-height: var(--font-display-xl-leading); letter-spacing: -0.02em; color: var(--text-primary); margin: 0; max-width: 900px;">
+        I design where complexity meets the <span style="font-style: italic;">person</span> who has to use it.
+      </h1>
+      <p style="font: var(--text-body-lg); color: var(--text-secondary); margin-top: 32px; max-width: 580px;">
+        UX designer with 5+ years transforming complex, high-stakes systems into experiences people actually understand and trust. My work spans AI platforms, enterprise tools, embedded industrial systems, and regulated digital products, grounded in deep research and validated with real people.
+      </p>
+      <div style="display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap;">
+        <x-import component-from-global-scope="DornazDesignSystem_1658b6.Button" variant="primary" size="lg" on-click="{{scrollToWork}}" hint-size="140px,52px">View the work</x-import>
+        <x-import component-from-global-scope="DornazDesignSystem_1658b6.Button" variant="secondary" size="lg" on-click="{{goAbout}}" hint-size="140px,52px">About me</x-import>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid var(--border-subtle); padding: 20px var(--space-8); max-width: 1120px; margin: 0 auto; display: flex; gap: 40px; flex-wrap: wrap;">
+    <sc-for list="{{domains}}" as="domain" hint-placeholder-count="4">
+      <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em;">{{domain}}</div>
+    </sc-for>
+  </section>
+
+  <section id="work" style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 16px;">
+      Selected work
+    </div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 64px; max-width: 720px; letter-spacing: -0.02em;">
+      Five products, one way of working: research first, systems before screens.
+    </h2>
+
+    <div class="home-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;">
+      <sc-for list="{{projects}}" as="project" hint-placeholder-count="5">
+        <a href="{{project.href}}" style="display: block; text-decoration: none; color: inherit; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-card); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-xs); transition: transform 0.45s cubic-bezier(0.16,1,0.3,1), box-shadow 0.45s cubic-bezier(0.16,1,0.3,1); grid-column: {{project.span}};" style-hover="transform:translateY(-6px); box-shadow:var(--shadow-lg);">
+          <div style="aspect-ratio: 16/9; background: var(--surface-sunken); display: flex; align-items: flex-end; justify-content: center; gap: 32px; font: var(--text-caption); color: var(--text-tertiary); position: relative; overflow: hidden;">
+            <sc-if value="{{project.cover}}" hint-placeholder-val="{{false}}">
+              <div style="width: 30%; max-width: 196px; aspect-ratio: 516 / 817; background: center bottom / contain no-repeat url({{project.cover}}); transform: translateY(13%); filter: drop-shadow(0 20px 40px rgba(15,23,42,0.16));"></div>
+              <div style="width: 30%; max-width: 196px; aspect-ratio: 464 / 785; background: center bottom / contain no-repeat url({{project.cover2}}); transform: translateY(22%); filter: drop-shadow(0 20px 40px rgba(15,23,42,0.16));"></div>
+            </sc-if>
+            <sc-if value="{{project.coverFull}}" hint-placeholder-val="{{false}}">
+              <div style="position: absolute; inset: 0; background: center / cover no-repeat url({{project.coverFull}});"></div>
+            </sc-if>
+            <sc-if value="{{project.coverPad}}" hint-placeholder-val="{{false}}">
+              <div style="position: absolute; inset: 0; background: var(--surface-sunken) center / contain no-repeat url({{project.coverPad}});"></div>
+            </sc-if>
+            <sc-if value="{{project.noCover}}" hint-placeholder-val="{{true}}">
+              <span style="margin: auto;">Cover image placeholder</span>
+            </sc-if>
+            <span style="position: absolute; top: 20px; left: 20px; font: var(--text-caption); color: var(--text-accent); background: var(--surface-accent-tint); padding: 5px 12px; border-radius: 999px; font-weight: 600;">{{project.badge}}</span>
+          </div>
+          <div style="padding: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+              <h3 style="font: var(--text-h3); margin: 0; color: var(--text-primary); letter-spacing: -0.01em;">{{project.title}}</h3>
+              <span style="font: var(--text-caption); color: var(--text-tertiary); white-space: nowrap;">{{project.year}}</span>
+            </div>
+            <p style="font: var(--text-body); color: var(--text-secondary); margin: 12px 0 0; max-width: 480px;">{{project.subtitle}}</p>
+            <div style="display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap;">
+              <sc-for list="{{project.tags}}" as="tag" hint-placeholder-count="3">
+                <span style="font: var(--text-caption); color: var(--text-secondary); background: var(--surface-sunken); border-radius: 999px; padding: 4px 12px;">{{tag}}</span>
+              </sc-for>
+            </div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="about" style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div class="home-about-grid" style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: start;">
+      <div>
+        <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 16px;">
+          About
+        </div>
+        <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0; letter-spacing: -0.02em;">
+          Systems thinking, applied where it's hardest to fake.
+        </h2>
+      </div>
+      <div>
+        <p style="font: var(--text-body-lg); color: var(--text-secondary); margin: 0 0 24px; max-width: 560px;">
+          Five-plus years across enterprise software, embedded HMI systems, AI-integrated products, healthcare platforms, and fintech concepts. I map the full ecosystem, hardware, software, and people, before I design a single screen, and I lead from discovery through engineering handoff.
+        </p>
+        <a href="About.dc.html" style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-button); color: var(--text-accent); text-decoration: none;" style-hover="color:var(--text-accent-hover);">
+          More about my background and process →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const projects = [
+      {
+        title: 'Octolux',
+        subtitle: 'An agentic AI operator platform spanning an embedded HMI and a web app. Shipped to production and recognized at Embedded World North America.',
+        tags: ['AI Product Design', 'Embedded HMI'],
+        year: '2025',
+        badge: 'Flagship · Shipped',
+        href: 'Octolux.dc.html',
+        span: 'span 2',
+        coverPad: 'uploads/pasted-1783546057756-0.png',
+        noCover: false,
+      },
+      {
+        title: 'KoolLOGIK',
+        subtitle: 'A safety-critical refrigeration HMI redesigned around guided workflows and a tiered alarm system: installation cut from ten steps to four.',
+        tags: ['Embedded HMI', 'Industrial IoT'],
+        year: '2024',
+        badge: 'Thermo-Kool',
+        href: 'KoolLogik.dc.html',
+        span: 'span 1',
+        coverFull: 'uploads/cooler-2.png',
+        noCover: false,
+      },
+      {
+        title: 'NURA',
+        subtitle: 'A connected sleep ecosystem built on explainable automation, validated with 50+ participants as an M.A. thesis.',
+        tags: ['AI Product Design', 'UX Research'],
+        year: '2025',
+        badge: 'M.A. thesis',
+        href: 'Nura.dc.html',
+        span: 'span 1',
+        coverFull: 'uploads/pasted-1783530312936-0.png',
+      },
+      {
+        title: 'Cue',
+        subtitle: 'A relationship-centered fintech concept that catches financial risk before it becomes conflict: surveyed 48, interviewed 6 couples, working iOS prototype.',
+        tags: ['Fintech', 'UX Research'],
+        year: '2026',
+        badge: 'Self-directed concept',
+        href: 'Cue.dc.html',
+        span: 'span 1',
+        cover: 'uploads/pasted-1783528090391-0.png',
+        cover2: 'uploads/pasted-1783528082370-0.png',
+        noCover: false,
+      },
+      {
+        title: 'Signify Health',
+        subtitle: 'Designing trust into a broken healthcare experience: led the research workstream diagnosing why members declined in-home evaluations, for Signify Health and CVS Health.',
+        tags: ['UX Research', 'Healthcare', 'Service Design'],
+        year: '2024',
+        badge: 'Research Lead',
+        href: 'SignifyHealth.dc.html',
+        span: 'span 1',
+        coverFull: 'uploads/pasted-1783630425342-0.png',
+        noCover: false,
+      },
+    ];
+
+    const navLinks = [
+      { label: 'Home', href: '#top' },
+      { label: 'About', href: 'About.dc.html' },
+    ];
+    const footerLinks = [
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dornaz-niknezhad/', icon: 'linkedin' },
+      { label: 'GitHub', href: 'https://github.com/dornaz-nk', icon: 'github' },
+    ];
+
+    return {
+      projects,
+      domains: ['Fintech', 'Embedded HMI', 'Healthcare', 'AI Products'],
+      navLinks,
+      footerLinks,
+      scrollToWork: () => { window.location.hash = 'work'; },
+      goAbout: () => { window.location.href = 'About.dc.html'; },
+    };
+  }
+}
+</script>
+</body>
+</html>

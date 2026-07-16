@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Dornaz Niknezhad</title>
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
+  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: #ffffff; }
+    a { color: var(--link-color); }
+    a:hover { color: var(--link-hover); }
+    @media (max-width: 900px) {
+      .about-hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .about-grid-3 { grid-template-columns: 1fr !important; }
+      .about-grid-2 { grid-template-columns: 1fr !important; }
+      .about-timeline { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ffffff; --section-padding-y: 104px;">
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+
+  <section class="about-hero-grid" style="padding: 152px var(--space-8) 96px; max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;">
+    <div>
+      <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 24px;">About</div>
+      <h1 style="font-family: var(--font-display-xl-family); font-weight: var(--font-display-xl-weight); font-size: var(--display-xl-size); line-height: var(--font-display-xl-leading); letter-spacing: -0.02em; color: var(--text-primary); margin: 0;">
+        I design where complexity meets the <span style="font-style: italic;">person</span> who has to use it.
+      </h1>
+      <p style="font: var(--text-body-lg); color: var(--text-secondary); margin-top: 28px; max-width: 560px;">
+        Product designer and UX researcher with 5+ years across enterprise software, embedded HMI systems, AI-integrated products, healthcare platforms, and fintech concepts. I lead from discovery through engineering handoff.
+      </p>
+      <div style="display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap;">
+        <x-import component-from-global-scope="DornazDesignSystem_1658b6.Button" variant="primary" size="lg" on-click="{{goContact}}" hint-size="140px,52px">Get in touch</x-import>
+        <x-import component-from-global-scope="DornazDesignSystem_1658b6.Button" variant="secondary" size="lg" on-click="{{goHome}}" hint-size="140px,52px">View my work</x-import>
+      </div>
+    </div>
+    <div>
+      <img src="uploads/pasted-1783630677001-0.png" alt="Portrait of Dornaz Niknezhad" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: var(--radius-lg); display: block; box-shadow: var(--shadow-md);">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px;">
+        <div>
+          <div style="font: var(--text-caption); color: var(--ink-600); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Based in</div>
+          <div style="font: var(--text-h4); color: var(--text-primary);">Dallas, TX</div>
+        </div>
+        <div>
+          <div style="font: var(--text-caption); color: var(--ink-600); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Open to</div>
+          <div style="font: var(--text-body); color: var(--text-primary);">Product design and UX research roles: on-site, hybrid, or remote.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 48px;">How I work</div>
+    <div class="about-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+      <sc-for list="{{howIWork}}" as="item" hint-placeholder-count="3">
+        <div>
+          <div style="font: var(--text-caption); font-weight: 700; color: var(--text-accent); margin-bottom: 16px;">{{item.n}}</div>
+          <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 12px; letter-spacing: -0.01em;">{{item.title}}</h3>
+          <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">{{item.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 16px;">Experience</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 56px; letter-spacing: -0.02em;">Where I've worked.</h2>
+    <div style="display: flex; flex-direction: column; gap: 44px;">
+      <sc-for list="{{experience}}" as="job" hint-placeholder-count="3">
+        <div class="about-timeline" style="display: grid; grid-template-columns: 160px 1fr; gap: 32px; border-top: 1px solid var(--border-default); padding-top: 28px;">
+          <div style="font: var(--text-caption); color: var(--ink-600); text-transform: uppercase; letter-spacing: 0.06em;">{{job.dates}}</div>
+          <div>
+            <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0;">{{job.role}}</h4>
+            <div style="font: var(--text-body-sm); color: var(--text-accent); margin: 6px 0 12px;">{{job.org}}</div>
+            <p style="font: var(--text-body); color: var(--text-secondary); margin: 0; max-width: 680px;">{{job.body}}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 16px;">Education &amp; credentials</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em;">Grounded in research training.</h2>
+    <div class="about-grid-2" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+      <sc-for list="{{credentials}}" as="c" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-card);">
+          <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 10px; letter-spacing: -0.01em;">{{c.title}}</h3>
+          <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">{{c.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap; margin-top: 24px; border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 32px 40px; background: var(--surface-accent-tint);">
+      <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); white-space: nowrap;">Award</div>
+      <div style="flex: 1; min-width: 280px;">
+        <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 6px; letter-spacing: -0.01em;">{{award.title}}</h3>
+        <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">{{award.body}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 16px;">Tools &amp; methods</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em;">What I work with.</h2>
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <sc-for list="{{skillRows}}" as="row" hint-placeholder-count="5">
+        <div style="display: grid; grid-template-columns: 140px 1fr; gap: 24px; border-top: 1px solid var(--border-default); padding-top: 20px; align-items: baseline;">
+          <div style="font: var(--text-caption); color: var(--ink-600); text-transform: uppercase; letter-spacing: 0.06em;">{{row.label}}</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <sc-for list="{{row.items}}" as="tool" hint-placeholder-count="6">
+              <span style="font: var(--text-caption); color: var(--text-secondary); background: var(--surface-card); border: 1px solid var(--border-default); border-radius: 999px; padding: 5px 14px;">{{tool}}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 16px;">Selected work</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em;">A few places to start.</h2>
+    <div class="about-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <sc-for list="{{selectedWork}}" as="w" hint-placeholder-count="3">
+        <a href="{{w.href}}" style="display: block; text-decoration: none; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); color: var(--text-accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px;">{{w.tag}}</div>
+          <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 10px; letter-spacing: -0.01em;">{{w.title}}</h3>
+          <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">{{w.body}}</p>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="border-radius: var(--radius-xl); background: var(--surface-inverse); padding: 88px 56px; text-align: center;">
+      <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--blue-500); margin-bottom: 20px;">Let's talk</div>
+      <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: #ffffff; margin: 0 auto 20px; max-width: 640px; letter-spacing: -0.02em;">Building something in healthcare or fintech?</h2>
+      <p style="font: var(--text-body-lg); color: var(--ink-300); margin: 0 auto 36px; max-width: 560px;">Those are the domains where my background fits strongest, but I'm always glad to talk about complex systems more broadly.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <x-import component-from-global-scope="DornazDesignSystem_1658b6.Button" variant="primary" size="lg" on-click="{{goContact}}" hint-size="140px,52px">Get in touch</x-import>
+        <x-import component-from-global-scope="DornazDesignSystem_1658b6.Button" variant="secondary" size="lg" on-click="{{goHome}}" dc-props="{{viewProjectsStyle}}" hint-size="140px,52px">View projects</x-import>
+      </div>
+    </div>
+  </section>
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      navLinks: [
+        { label: 'Home', href: 'Home.dc.html' },
+        { label: 'About', href: 'About.dc.html' },
+      ],
+      footerLinks: [
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dornaz-niknezhad/', icon: 'linkedin' },
+        { label: 'GitHub', href: 'https://github.com/dornaz-nk', icon: 'github' },
+      ],
+      selectedWork: [
+        { tag: 'Healthcare', title: 'NURA', body: 'AI-powered connected sleep ecosystem, validated with 50+ participants.', href: 'Nura.dc.html' },
+        { tag: 'Fintech', title: 'Cue', body: 'Relationship-centered financial wellness app, self-directed 0 to 1 concept.', href: 'Cue.dc.html' },
+        { tag: 'Flagship', title: 'Octolux', body: 'Agentic AI operator platform across embedded HMI and web.', href: 'Octolux.dc.html' },
+      ],
+      goContact: () => { window.location.href = 'mailto:dornaz.nk@gmail.com'; },
+      viewProjectsStyle: { style: { background: '#ffffff', color: '#8B8D92', border: '1px solid #ffffff' } },
+      goHome: () => { window.location.href = 'Home.dc.html#work'; },
+      howIWork: [
+        { n: '01', title: 'Systems before screens', body: 'I map the full ecosystem, hardware, software, and people, before I design a single screen. In embedded and industrial work especially, most usability problems are structural, not visual.' },
+        { n: '02', title: 'Evidence, not assumption', body: 'Every decision traces back to a research finding. When the evidence contradicts my starting assumption, I let it change the direction of the project.' },
+        { n: '03', title: 'Design and project leadership', body: 'I lead design direction, coordinate with engineering, and help manage project scope and timeline. A designer and a project leader, not a developer, and not a people manager.' },
+      ],
+      experience: [
+        {
+          dates: 'Mar 2024 to Present',
+          role: 'Product Designer',
+          org: 'NTX Embedded · Dallas, TX',
+          body: 'Leading end-to-end UX across embedded HMIs, enterprise web applications, AI products, and industrial control systems: Octolux, KoolLOGIK, and more. Building the company\u2019s design system and UX practice from scratch, including customer discovery, workshops, usability testing, documentation, and engineering handoff.',
+        },
+        {
+          dates: 'Oct 2022 to Jun 2023',
+          role: 'UX/UI Designer',
+          org: 'Esurgi Biotech',
+          body: 'Designed accessible healthcare experiences and built scalable component libraries, collaborating directly with clinical and engineering teams. Conducted usability testing and iterated on products using user feedback and analytics.',
+        },
+        {
+          dates: 'Mar 2020 to Jul 2022',
+          role: 'Art Director',
+          org: 'Aggieland Outfitters',
+          body: 'Led creative and UX initiatives across digital and print experiences: branding, campaigns, marketing assets, website support, photography, production, and team coordination.',
+        },
+      ],
+      credentials: [
+        { title: 'Master of Arts, Interaction Design', body: 'University of North Texas, UX research focus. M.A. thesis: NURA, a connected sleep ecosystem validated with 50+ participants.' },
+        { title: 'B.A.A.S., Applied Arts & Sciences', body: 'University of North Texas, concentrations in Design and Data Analytics.' },
+        { title: 'Nielsen Norman Group UX Certificate', body: 'Continued professional certification in UX research and design practice.' },
+        { title: 'Google UX Design Certificate', body: 'Professional certificate covering the end-to-end UX process, from research through high-fidelity prototyping.' },
+      ],
+      award: { title: 'Embedded World North America Award', body: 'Recognized for Octolux, an agentic AI operator platform designed end to end across embedded HMI and web app.' },
+      skillRows: [
+        { label: 'Design', items: ['Figma (expert)', 'Crank Storyboard', 'Qt Design Studio', 'Illustrator', 'Photoshop', 'InDesign', 'Adobe XD'] },
+        { label: 'Research', items: ['Qualtrics', 'UserTesting', 'Lyssna', 'Maze', 'Typeform', 'Condens', 'Dovetail', 'Great Question', 'Optimal Workshop'] },
+        { label: 'Methods', items: ['User interviews', 'Contextual inquiry', 'Usability testing', 'Surveys', 'Affinity mapping', 'Card sorting', 'Journey mapping'] },
+        { label: 'Collaboration', items: ['Miro', 'Mural', 'FigJam', 'Notion', 'Azure DevOps', 'Asana'] },
+        { label: 'Development', items: ['HTML & CSS (reading level)', 'WordPress (theme-level)', 'Chromatic'] },
+        { label: 'AI collaboration', items: ['Claude', 'ChatGPT', 'Figma Make'] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

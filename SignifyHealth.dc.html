@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signify Health — Case Study — Dornaz Niknezhad</title>
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
+  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: #ffffff; }
+    a { color: var(--link-color); }
+    a:hover { color: var(--link-hover); }
+    @media (max-width: 900px) {
+      .np-card { grid-template-columns: 1fr !important; }
+      .np-card > div:last-child { min-height: 200px !important; order: -1; }
+      .cs-grid-2 { grid-template-columns: 1fr !important; }
+      .cs-grid-3 { grid-template-columns: 1fr !important; }
+      .cs-grid-4 { grid-template-columns: repeat(2,1fr) !important; }
+      .cs-stats { grid-template-columns: repeat(2,1fr) !important; }
+      .cs-phases { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ffffff;" data-sh-root>
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+
+  <section style="padding: 152px var(--space-8) 0; max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="accent" hint-size="auto,32px">Research lead</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Service design</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Healthcare UX</x-import>
+    </div>
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 24px;">Case study, Signify Health &times; CVS Health</div>
+    <h1 style="font-family: var(--font-display-xl-family); font-weight: var(--font-display-xl-weight); font-size: var(--display-xl-size); line-height: var(--font-display-xl-leading); letter-spacing: -0.02em; color: var(--text-primary); margin: 0; max-width: 900px;">
+      Designing trust into a broken healthcare experience.
+    </h1>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin-top: 28px; max-width: 660px;">
+      Signify Health provides in-home health evaluations for older adults. Members were declining visits and losing trust, not because the service was bad, but because the experience around it was broken. I led the research workstream that diagnosed why.
+    </p>
+    <div style="margin-top: 32px;">
+      <a href="https://drive.google.com/file/d/1u6j7s5ZRGgF8o0anowIv_dlnI1EHGdjW/view" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-button); color: #ffffff; background: var(--accent); padding: 13px 24px; border-radius: var(--radius-pill); text-decoration: none;" style-hover="background: var(--accent-active);">View the presentation &rarr;</a>
+    </div>
+    <div style="display: flex; gap: var(--space-10); margin-top: var(--space-12); flex-wrap: wrap;">
+      <sc-for list="{{meta}}" as="m" hint-placeholder-count="5">
+        <div>
+          <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em;">{{m.label}}</div>
+          <div style="font: var(--text-body); font-weight: 600; color: var(--text-primary); margin-top: 4px;">{{m.value}}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: var(--space-16); border-radius: var(--radius-xl); background: #101a30; padding: 64px var(--space-8); text-align: center;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #5BB8F5; margin-bottom: 20px;">The core finding</div>
+      <p style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: 1.15; color: #ffffff; margin: 0 auto; max-width: 820px; letter-spacing: -0.02em;">The experience was designed to complete a transaction, when it needed to build a relationship.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">The presentation</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 20px; letter-spacing: -0.02em; max-width: 780px;">The research, as presented to CVS Health.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 40px;">The full deck that translated six months of discovery into a prioritized, evidence-backed case for change. Browse it below, or open it full screen.</p>
+    <sc-if value="{{showEmbed}}" hint-placeholder-val="{{true}}">
+      <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-default); background: var(--surface-sunken); box-shadow: var(--shadow-lg);">
+        <iframe src="https://drive.google.com/file/d/1u6j7s5ZRGgF8o0anowIv_dlnI1EHGdjW/preview" allow="autoplay" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" title="Signify Health research presentation"></iframe>
+      </div>
+    </sc-if>
+    <sc-if value="{{showCover}}" hint-placeholder-val="{{false}}">
+      <a href="https://drive.google.com/file/d/1u6j7s5ZRGgF8o0anowIv_dlnI1EHGdjW/view" target="_blank" rel="noopener" style="display: block; position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-default); background: var(--surface-sunken); box-shadow: var(--shadow-lg); text-decoration: none;" style-hover="box-shadow: var(--shadow-xl);">
+        {{coverEl}}
+        <sc-if value="{{noCover}}" hint-placeholder-val="{{true}}">
+          <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: #101a30; color: #8296b5;">
+            <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em;">Cover image</div>
+            <div style="font: var(--text-body-sm);">Set a cover image in the Presentation tweaks</div>
+          </div>
+        </sc-if>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(9,13,24,0.55), rgba(9,13,24,0) 55%);"></div>
+        <div style="position: absolute; left: 24px; bottom: 22px; right: 24px; display: flex; align-items: center; gap: 14px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 999px; background: var(--accent); color: #ffffff; flex-shrink: 0;">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"></path></svg>
+          </span>
+          <div>
+            <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: #b9c6de;">Presentation</div>
+            <div style="font: var(--text-h4); color: #ffffff;">Watch the research walkthrough</div>
+          </div>
+        </div>
+      </a>
+    </sc-if>
+    <div style="margin-top: 24px;">
+      <a href="https://drive.google.com/file/d/1u6j7s5ZRGgF8o0anowIv_dlnI1EHGdjW/view" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-button); color: var(--text-primary); background: transparent; border: 1px solid var(--border-default); padding: 13px 24px; border-radius: var(--radius-pill); text-decoration: none;" style-hover="background: var(--surface-sunken);">Open full screen &rarr;</a>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div class="cs-stats" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; border-top: 1px solid var(--border-subtle); padding-top: 48px;">
+      <sc-for list="{{heroStats}}" as="h" hint-placeholder-count="3">
+        <div>
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup>{{h.value}}</div>
+          <div style="font: var(--text-body); font-weight: 600; color: var(--text-primary); margin-top: 8px;">{{h.title}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 6px 0 0;">{{h.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 800px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">01 · Overview</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 20px; letter-spacing: -0.02em;">A systems-level trust problem, not a visual one.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin: 0 0 20px;">Signify was delivering real clinical value: in-home assessments that caught conditions earlier and connected older adults to resources. But members were saying no before they could experience any of it. The problem was not the service, it was the experience leading up to it.</p>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin: 0 0 24px;">Trust, transparency, communication, and perceived control were all breaking down at different points, and the research had to map all of it before design could touch any of it.</p>
+    <div style="border-left: 3px solid var(--border-accent); padding-left: 24px;">
+      <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 8px;">My scope</div>
+      <p style="font: var(--text-body); color: var(--text-primary); margin: 0;">End-to-end ownership of the research workstream: methodology, user interviews, competitive analysis, AI-assisted synthesis of 300+ behavioral insights, journey mapping across three actor groups, and the final research appendix presented to CVS Health.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">02 · The problem</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 820px;">Trust broke down before the visit even started.</h2>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 56px;">
+      <div style="border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 18px;">Before, what was broken</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{before}}" as="b" hint-placeholder-count="5"><div style="display: flex; gap: 12px; border-top: 1px solid var(--border-subtle); padding-top: 12px;"><span style="color: #DC2626; font-weight: 700; flex-shrink: 0;">✕</span><span style="font: var(--text-body-sm); color: var(--text-secondary);">{{b}}</span></div></sc-for>
+        </div>
+      </div>
+      <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-accent-tint);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 18px;">After, what research recommended</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{after}}" as="a" hint-placeholder-count="5"><div style="display: flex; gap: 12px; border-top: 1px solid rgba(59,110,246,0.16); padding-top: 12px;"><span style="color: #22C55E; font-weight: 700; flex-shrink: 0;">✓</span><span style="font: var(--text-body-sm); color: var(--text-primary);">{{a}}</span></div></sc-for>
+        </div>
+      </div>
+    </div>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{problemCards}}" as="c" hint-placeholder-count="3">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 18px;">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{c.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{c.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">03 · Research leadership</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">I led the research. Every insight, every category, every priority.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">This was not background research. I structured the discovery process, ran the interviews, synthesized what came out of them, and made the prioritization decisions that shaped what the team designed next.</p>
+    <div class="cs-stats" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; border-top: 1px solid var(--border-default); padding-top: 40px; margin-bottom: 56px;">
+      <sc-for list="{{leadStats}}" as="ls" hint-placeholder-count="4">
+        <div>
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup>{{ls.value}}</div>
+          <div style="font: var(--text-body-sm); color: var(--text-secondary); margin-top: 8px;">{{ls.label}}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 40px; max-width: 760px;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 20px;">From raw signal to structure</div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <sc-for list="{{funnel}}" as="f" hint-placeholder-count="3">
+          <div>
+            <div style="font: var(--text-body-sm); color: var(--text-secondary); margin-bottom: 6px;">{{f.label}}</div>
+            <div style="height: 46px; border-radius: 12px; background: var(--surface-card); border: 1px solid var(--border-subtle); overflow: hidden;">
+              <div data-bar="{{f.w}}" style="width: {{f.w}}; height: 100%; background: var(--accent); border-radius: 12px; display: flex; align-items: center; padding-left: 18px; color: #ffffff; font: var(--text-h4); white-space: nowrap;">{{f.count}}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div class="cs-phases" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 40px;">
+      <sc-for list="{{phases}}" as="ph" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 6px;">{{ph.n}}</div>
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 16px;">{{ph.title}}</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <sc-for list="{{ph.items}}" as="it" hint-placeholder-count="4"><div style="display: flex; gap: 10px; border-top: 1px solid var(--border-subtle); padding-top: 10px;"><span style="color: var(--text-accent); flex-shrink: 0;">&rarr;</span><span style="font: var(--text-body-sm); color: var(--text-secondary);">{{it}}</span></div></sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-accent-tint); max-width: 860px;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">AI-assisted research synthesis</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0;">With 300+ insights across many sessions, manual synthesis alone was not feasible at the speed the project required. I used AI to help process, cluster, and surface patterns across the data, then applied my own judgment to validate, reframe, and prioritize what it surfaced. That accelerated the cycle significantly without losing the human interpretation that makes research actionable.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">04 · What the research found</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Four findings that reframed the whole brief.</h2>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;">
+      <sc-for list="{{findings}}" as="f" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-card);">
+          <div style="font: var(--text-h3); color: var(--text-accent); margin-bottom: 12px; letter-spacing: -0.02em;">{{f.n}}</div>
+          <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 12px;">{{f.title}}</h3>
+          <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">{{f.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">The emotional arc</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">Anxiety peaks at the unknown, not the procedure.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 40px;">Members were not anxious about the evaluation itself. They were anxious about a stranger entering their home. Clear communication beforehand flattens the spike, long before the clinician arrives.</p>
+    <div style="border-radius: var(--radius-xl); background: #101a30; padding: 40px var(--space-8);">
+      <svg viewBox="0 0 820 380" style="width: 100%; height: auto; display: block;" role="img" aria-label="Line chart: member anxiety across the visit journey, before and after trust-building communication">
+        <g stroke="#22314f" stroke-width="1">
+          <line x1="90" y1="60" x2="730" y2="60"/>
+          <line x1="90" y1="120" x2="730" y2="120"/>
+          <line x1="90" y1="180" x2="730" y2="180"/>
+          <line x1="90" y1="240" x2="730" y2="240"/>
+          <line x1="90" y1="300" x2="730" y2="300"/>
+        </g>
+        <line x1="474" y1="70" x2="474" y2="300" stroke="#E0564B" stroke-width="1" stroke-dasharray="4 5" stroke-opacity="0.7"/>
+        <text x="474" y="52" text-anchor="middle" fill="#E0564B" font-family="Manrope, sans-serif" font-size="13" font-weight="600">Peak: the unknown</text>
+        <path data-draw="1" d="M90 132 L218 112.8 L346 96 L474 79.2 L602 204 L730 240" fill="none" stroke="#E0564B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path data-draw="1" d="M90 132 L218 192 L346 228 L474 247.2 L602 256.8 L730 266.4" fill="none" stroke="#5BB8F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <g>
+          <circle data-dot="1" cx="90" cy="132" r="4.5" fill="#E0564B"/><circle data-dot="1" cx="218" cy="112.8" r="4.5" fill="#E0564B"/><circle data-dot="1" cx="346" cy="96" r="4.5" fill="#E0564B"/><circle data-dot="1" cx="474" cy="79.2" r="4.5" fill="#E0564B"/><circle data-dot="1" cx="602" cy="204" r="4.5" fill="#E0564B"/><circle data-dot="1" cx="730" cy="240" r="4.5" fill="#E0564B"/>
+          <circle data-dot="1" cx="90" cy="132" r="4.5" fill="#5BB8F5"/><circle data-dot="1" cx="218" cy="192" r="4.5" fill="#5BB8F5"/><circle data-dot="1" cx="346" cy="228" r="4.5" fill="#5BB8F5"/><circle data-dot="1" cx="474" cy="247.2" r="4.5" fill="#5BB8F5"/><circle data-dot="1" cx="602" cy="256.8" r="4.5" fill="#5BB8F5"/><circle data-dot="1" cx="730" cy="266.4" r="4.5" fill="#5BB8F5"/>
+        </g>
+        <g fill="#8296b5" font-family="Manrope, sans-serif" font-size="13" text-anchor="middle">
+          <text x="90" y="330">Invitation</text><text x="218" y="330">Scheduling</text><text x="346" y="330">Day before</text><text x="474" y="330">Arrival</text><text x="602" y="330">During</text><text x="730" y="330">After</text>
+        </g>
+        <g font-family="Manrope, sans-serif" font-size="14">
+          <rect x="90" y="354" width="16" height="4" rx="2" fill="#E0564B"/><text x="114" y="361" fill="#c7d4ea">Before, current experience</text>
+          <rect x="360" y="354" width="16" height="4" rx="2" fill="#5BB8F5"/><text x="384" y="361" fill="#c7d4ea">After, with clear communication</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">05 · In their words</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">What 300+ insights actually told us.</h2>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 48px;">
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 20px;">What members told us</div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <sc-for list="{{memberQuotes}}" as="q" hint-placeholder-count="4">
+            <div style="border-left: 3px solid var(--border-accent); padding-left: 18px;">
+              <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 6px;">{{q.tag}}</div>
+              <p style="font-family: var(--font-display-italic-family); font-style: italic; font-size: 1.15rem; line-height: 1.5; color: var(--text-primary); margin: 0;">{{q.quote}}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 20px;">What clinicians told us</div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <sc-for list="{{clinicianQuotes}}" as="q" hint-placeholder-count="4">
+            <div style="border-left: 3px solid var(--border-default); padding-left: 18px;">
+              <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 6px;">{{q.tag}}</div>
+              <p style="font-family: var(--font-display-italic-family); font-style: italic; font-size: 1.15rem; line-height: 1.5; color: var(--text-primary); margin: 0;">{{q.quote}}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="border-left: 3px solid var(--border-accent); padding-left: 24px; max-width: 760px;">
+      <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 8px;">The unifying insight</div>
+      <p style="font: var(--text-h4); color: var(--text-primary); margin: 0; font-weight: 500;">Every failure traced to the same root cause: the experience was built to complete a transaction, not to build a relationship. Members were never given the information they needed to feel safe before saying yes.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">06 · Design themes</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Six themes that structured the recommendations.</h2>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{themes}}" as="t" hint-placeholder-count="6">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 10px;">{{t.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{t.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">07 · Deliverables</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">What I produced.</h2>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{deliverables}}" as="d" hint-placeholder-count="6">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">{{d.n}}</div>
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{d.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{d.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">08 · Outcomes</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">What the research delivered.</h2>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 56px;">
+      <sc-for list="{{outcomes}}" as="o" hint-placeholder-count="6">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 20px;">
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup>{{o.value}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 10px 0 0;">{{o.label}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-sunken); max-width: 860px;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">What this made possible</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0;">Before this work the team had symptoms. After it, they had causes, and a prioritized, evidence-backed roadmap for addressing them. The presentation to CVS Health was not a summary of findings, it was a case for a fundamentally different approach to how Signify designed member communication.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">09 · What I learned</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Research is a design skill, not a pre-design step.</h2>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;">
+      <sc-for list="{{lessons}}" as="l" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 10px;">{{l.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{l.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 800px; margin: 0 auto; border-top: 1px solid var(--border-subtle); text-align: center;">
+    <p style="font-family: var(--font-display-italic-family); font-style: italic; font-size: var(--display-italic-size); line-height: var(--font-display-italic-leading); color: var(--text-primary); margin: 0 0 24px;">"You can't tell people to trust a service. You have to design the moments where trust forms."</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="mailto:dornaz.nk@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-button); color: #ffffff; background: var(--accent); padding: 14px 28px; border-radius: var(--radius-pill); text-decoration: none;" style-hover="background: var(--accent-active);">Let's work together &rarr;</a>
+      <a href="https://drive.google.com/file/d/1u6j7s5ZRGgF8o0anowIv_dlnI1EHGdjW/view" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-button); color: var(--text-primary); background: transparent; border: 1px solid var(--border-default); padding: 14px 28px; border-radius: var(--radius-pill); text-decoration: none;" style-hover="background: var(--surface-sunken);">View the presentation &rarr;</a>
+    </div>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--space-16); max-width: 1120px; margin: 0 auto; padding-top: var(--section-padding-y);">
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px;">
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="accent" hint-size="auto,32px">UX research</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Service design</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Healthcare</x-import>
+    </div>
+    <a href="Octolux.dc.html" class="np-card" style="display: grid; grid-template-columns: 1fr 300px; align-items: stretch; border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); overflow: hidden; text-decoration: none; color: inherit; background: var(--surface-card); box-shadow: var(--shadow-xs); transition: box-shadow 0.25s ease, transform 0.25s ease;" style-hover="box-shadow: var(--shadow-lg); transform: translateY(-4px);">
+      <div style="padding: 40px 44px;">
+        <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">Next case study</div>
+        <div style="font: var(--text-h3); color: var(--text-primary); margin-bottom: 20px; letter-spacing: -0.01em;">Octolux: the agentic AI operator platform</div>
+        <span style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-body-sm); font-weight: 600; color: var(--text-accent);">View case study &rarr;</span>
+      </div>
+      <div style="background: var(--surface-sunken) center / cover no-repeat url(uploads/pasted-1783546057756-0.png); min-height: 200px;"></div>
+    </a>
+  </section>
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;presentationMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Live embed&quot;,&quot;Cover image&quot;],&quot;default&quot;:&quot;Cover image&quot;,&quot;tsType&quot;:&quot;\&quot;Live embed\&quot; | \&quot;Cover image\&quot;&quot;,&quot;section&quot;:&quot;Presentation&quot;},&quot;coverImage&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;uploads/pasted-1783630425342-0.png&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Presentation&quot;},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;options&quot;:[&quot;#3b6ef6&quot;,&quot;#0e7c7b&quot;,&quot;#b4530a&quot;,&quot;#6d28d9&quot;],&quot;default&quot;:&quot;#3b6ef6&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  applyAccent() {
+    var c = this.props && this.props.accentColor;
+    if (!c) return;
+    var root = document.querySelector('[data-sh-root]');
+    if (!root) return;
+    root.style.setProperty('--accent', c);
+    root.style.setProperty('--text-accent', c);
+    root.style.setProperty('--border-accent', c);
+    root.style.setProperty('--link-color', c);
+    root.style.setProperty('--link-hover', c);
+    root.style.setProperty('--accent-active', c);
+    try {
+      root.style.setProperty('--surface-accent-tint', 'color-mix(in srgb, ' + c + ' 8%, #ffffff)');
+    } catch (e) {}
+  }
+  componentDidUpdate() { this.applyAccent(); }
+  componentDidMount() {
+    this.applyAccent();
+    try {
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const root = document.querySelector('[data-sh-root]') || document;
+      const countUp = (el) => {
+        const raw = el.getAttribute('data-countup-raw') || el.textContent;
+        el.setAttribute('data-countup-raw', raw);
+        const nums = raw.match(/\d[\d,\.]*/g);
+        if (!nums || nums.length !== 1) return;
+        const numStr = nums[0];
+        const target = parseFloat(numStr.replace(/,/g, ''));
+        if (!isFinite(target)) return;
+        const isFloat = numStr.indexOf('.') >= 0;
+        const dur = 1200, t0 = performance.now();
+        const tick = (now) => {
+          const p = Math.min(1, (now - t0) / dur);
+          const e = 1 - Math.pow(1 - p, 3);
+          const cur = isFloat ? (target * e).toFixed(1) : Math.round(target * e).toLocaleString();
+          el.textContent = raw.replace(numStr, cur);
+          if (p < 1) requestAnimationFrame(tick); else el.textContent = raw;
+        };
+        requestAnimationFrame(tick);
+      };
+      const sections = Array.prototype.slice.call(root.querySelectorAll('section'));
+      if (reduce || !('IntersectionObserver' in window)) return;
+      const staggerSelector = '.cs-grid-2 > *, .cs-grid-3 > *, .cs-grid-4 > *, .cs-stats > *, .cs-phases > *';
+      sections.forEach((s) => {
+        s.style.opacity = '0';
+        s.style.transform = 'translateY(28px)';
+        s.style.transition = 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+        s.style.willChange = 'opacity, transform';
+        var kids = s.querySelectorAll(staggerSelector);
+        for (var k = 0; k < kids.length; k++) {
+          kids[k].style.opacity = '0';
+          kids[k].style.transform = 'translateY(20px)';
+          kids[k].style.transition = 'opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1)';
+        }
+        var bars = s.querySelectorAll('[data-bar]');
+        for (var bi = 0; bi < bars.length; bi++) bars[bi].style.width = '0';
+        var dots = s.querySelectorAll('[data-dot]');
+        for (var di = 0; di < dots.length; di++) dots[di].style.opacity = '0';
+        var paths = s.querySelectorAll('path[data-draw]');
+        for (var pi = 0; pi < paths.length; pi++) { try { var L = paths[pi].getTotalLength(); paths[pi].style.strokeDasharray = L; paths[pi].style.strokeDashoffset = L; } catch (e) {} }
+      });
+      const revealKids = (section) => {
+        const kids = section.querySelectorAll(staggerSelector);
+        for (let i = 0; i < kids.length; i++) {
+          kids[i].style.transitionDelay = (i * 70) + 'ms';
+          kids[i].style.opacity = '1';
+          kids[i].style.transform = 'none';
+        }
+      };
+      const animateCharts = (section) => {
+        const bars = section.querySelectorAll('[data-bar]');
+        for (let i = 0; i < bars.length; i++) { bars[i].style.transition = 'width 1s cubic-bezier(0.16,1,0.3,1) ' + (i * 0.14) + 's'; bars[i].style.width = bars[i].getAttribute('data-bar'); }
+        const paths = section.querySelectorAll('path[data-draw]');
+        for (let i = 0; i < paths.length; i++) { paths[i].style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.16,1,0.3,1) ' + (i * 0.35) + 's'; paths[i].style.strokeDashoffset = '0'; }
+        const dots = section.querySelectorAll('[data-dot]');
+        for (let i = 0; i < dots.length; i++) { dots[i].style.transition = 'opacity 0.4s ease ' + (0.7 + i * 0.045) + 's'; dots[i].style.opacity = '1'; }
+      };
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.style.opacity = '1';
+            en.target.style.transform = 'none';
+            revealKids(en.target);
+            animateCharts(en.target);
+            const stats = en.target.querySelectorAll('[data-countup]');
+            for (let i = 0; i < stats.length; i++) countUp(stats[i]);
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+      sections.forEach((s) => io.observe(s));
+      setTimeout(() => {
+        sections.forEach((s) => {
+          if (getComputedStyle(s).opacity === '0') {
+            s.style.opacity = '1';
+            s.style.transform = 'none';
+            revealKids(s);
+            animateCharts(s);
+            const stats = s.querySelectorAll('[data-countup]');
+            for (let i = 0; i < stats.length; i++) countUp(stats[i]);
+          }
+        });
+      }, 700);
+    } catch (e) { /* fail open */ }
+  }
+  renderVals() {
+    var mode = (this.props && this.props.presentationMode) || 'Live embed';
+    var cover = (this.props && this.props.coverImage) ? String(this.props.coverImage).trim() : 'uploads/pasted-1783630425342-0.png';
+    return {
+      showEmbed: mode !== 'Cover image',
+      showCover: mode === 'Cover image',
+      hasCover: !!cover,
+      noCover: !cover,
+      coverEl: cover ? React.createElement('img', {
+        src: cover,
+        alt: 'Signify Health research presentation cover',
+        style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }
+      }) : null,
+      navLinks: [
+        { label: 'Home', href: 'Home.dc.html' },
+        { label: 'About', href: 'About.dc.html' },
+      ],
+      footerLinks: [
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dornaz-niknezhad/', icon: 'linkedin' },
+        { label: 'GitHub', href: 'https://github.com/dornaz-nk', icon: 'github' },
+      ],
+      meta: [
+        { label: 'Role', value: 'Research lead, UX designer' },
+        { label: 'Timeline', value: 'Jan to Jun 2024' },
+        { label: 'Team', value: '10-person cross-functional' },
+        { label: 'Client', value: 'Signify Health, CVS Health' },
+        { label: 'Tools', value: 'Dovetail, ChatGPT, Figma, Excel' },
+      ],
+      heroStats: [
+        { value: '300+', title: 'Behavioral insights', body: 'Gathered, synthesized, and prioritized across every research session.' },
+        { value: '6', title: 'Months of research', body: 'A full discovery cycle from interviews through prioritized recommendations.' },
+        { value: '10', title: 'Person team', body: 'The cross-functional group whose research workstream I led end to end.' },
+      ],
+      before: [
+        'Members felt anxious and confused before a visit, unclear what to expect',
+        'Communication was transactional and robotic, with no human warmth or explanation',
+        'Caregivers and family members were left out of the communication loop',
+        'No information about who was coming, why, or what would happen to their data',
+        'Trust signals were absent, members could not verify the service was legitimate',
+      ],
+      after: [
+        'Trust signals embedded into every touchpoint, not just the interface',
+        'Clear, human-centered communication that explains who is coming and why',
+        'Caregivers and family included in the communication loop by default',
+        'Proactive answers to the questions members were too hesitant to ask',
+        'Explainability built into the experience, not added as an afterthought',
+      ],
+      problemCards: [
+        { title: 'Trust is a design problem', body: 'Members did not distrust healthcare. They distrusted an experience that gave them no information, no control, and no warmth. The interface behavior created anxiety, not confidence.' },
+        { title: 'Older adults as primary users', body: 'Different comfort levels with technology, varying health literacy, and heightened privacy concerns. Designing for them meant understanding emotional states as much as task flows.' },
+        { title: 'A multi-actor experience', body: 'Members, caregivers, clinicians, and providers all touched different parts of the system, but it was designed as if only one person was involved.' },
+      ],
+      funnel: [
+        { label: '300+ raw behavioral insights', count: '300+', w: '100%' },
+        { label: 'Clustered into 6 design themes', count: '6 themes', w: '48%' },
+        { label: 'Mapped across 3 actor groups', count: '3 groups', w: '28%' },
+      ],
+      leadStats: [
+        { value: '300+', label: 'Behavioral insights synthesized' },
+        { value: '6', label: 'Months of discovery research' },
+        { value: '10', label: 'Person cross-functional team led' },
+        { value: '3', label: 'Actor groups mapped' },
+      ],
+      phases: [
+        { n: 'Phase 01 · discovery', title: 'Interviews and surveys', items: ['Semi-structured interviews with older adults, caregivers, and clinicians', 'Surveys on attitudes toward in-home healthcare', 'Competitive analysis of member communication', 'Audit of the current member-facing platform'] },
+        { n: 'Phase 02 · synthesis', title: 'Processing and clustering', items: ['AI-assisted clustering of 300+ insights at scale', 'Manual validation and reframing of surfaced patterns', 'Priority ranking by frequency, severity, and opportunity', 'Theme identification across all three actor groups'] },
+        { n: 'Phase 03 · mapping', title: 'Journey maps and docs', items: ['Multi-actor journey maps: member, caregiver, clinician', 'Emotional-arc mapping across the visit cycle', 'Cognitive walkthrough of the existing experience', 'Research appendix for the CVS Health presentation'] },
+      ],
+      findings: [
+        { n: '01', title: 'Trust is built before the visit, not during it', body: 'Members who received clear, human communication beforehand were far more comfortable. By the time the clinician arrived, the trust decision had already been made, based on what they had received in writing.' },
+        { n: '02', title: 'Explainability is the missing trust signal', body: 'Users did not distrust recommendations, they distrusted recommendations with no explanation. "Why is this person coming? What happens to my information?" went unanswered. Answering those questions changed everything.' },
+        { n: '03', title: 'Caregivers are the invisible decision-makers', body: 'Adult children and caregivers often made or influenced the decision to accept a visit, but the experience was designed only for the member. Including them was a high-leverage, low-effort opportunity.' },
+        { n: '04', title: 'Anxiety peaks at the unknown, not the procedure', body: 'Members were not anxious about the evaluation itself, they were anxious about a stranger entering their home. Clinician profiles, arrival windows, and procedural previews reduced anxiety more than any interface change.' },
+      ],
+      memberQuotes: [
+        { tag: 'Trust and legitimacy', quote: '"I didn\u2019t know who was coming or why. I thought it might be a scam."' },
+        { tag: 'Explainability', quote: '"Nobody explained what they were going to do. I felt like an experiment."' },
+        { tag: 'Multi-actor communication', quote: '"I wanted my daughter involved but she never got any of the information."' },
+        { tag: 'Human communication', quote: '"The emails felt like they came from a robot. I didn\u2019t feel like anyone cared."' },
+      ],
+      clinicianQuotes: [
+        { tag: 'Pre-visit communication gap', quote: '"Members are anxious when I arrive. They weren\u2019t prepared for what the visit involves."' },
+        { tag: 'Trust recovery at the door', quote: '"I often spend the first 10 minutes reassuring people rather than starting the assessment."' },
+        { tag: 'Caregiver exclusion', quote: '"Family members call me mid-visit because they weren\u2019t told anything. It\u2019s disruptive."' },
+        { tag: 'Explainability equals outcomes', quote: '"When people understand why I\u2019m there, the visit goes completely differently."' },
+      ],
+      themes: [
+        { title: 'Trust and transparency', body: 'Every touchpoint had to answer "how do I know this is safe, legitimate, and for my benefit?" before the member had to ask.' },
+        { title: 'Explainability', body: 'Decisions and processes needed to be explained, not just presented. Members who understood why were far more likely to engage.' },
+        { title: 'Human-centered communication', body: 'Less robotic, transactional language. Healthcare communication that feels like it is from a person who cares.' },
+        { title: 'Emotional UX', body: 'Designing for the anxiety, vulnerability, and uncertainty older adults feel when healthcare enters their home, not just the task of scheduling.' },
+        { title: 'Accessibility and senior design', body: 'Clearer hierarchy, reduced cognitive load, larger targets, and simpler language, structured for clarity and control, not dumbed down.' },
+        { title: 'Multi-actor experience', body: 'Members, caregivers, and clinicians in the same design lens, each with different needs, entry points, and relationships to trust.' },
+      ],
+      deliverables: [
+        { n: 'Deliverable 01', title: 'Multi-actor journey maps', body: 'Member, caregiver, and clinician experiences, with emotional states, touchpoints, and pain points across the full visit cycle.' },
+        { n: 'Deliverable 02', title: 'Cognitive walkthrough', body: 'A step-by-step evaluation of the existing experience, identifying where friction, trust breakdowns, and communication failures occurred.' },
+        { n: 'Deliverable 03', title: 'Design synthesis', body: 'Prioritized recommendations organized by the six themes, with supporting evidence from the 300+ insight dataset and clear rationale.' },
+        { n: 'Deliverable 04', title: 'Research appendix', body: 'Full 6-month documentation delivered to Signify and CVS, including raw insights, clustered findings, methodology notes, and summaries.' },
+        { n: 'Deliverable 05', title: 'AI synthesis documentation', body: 'A repeatable, scalable methodology for processing large insight datasets without sacrificing analytical rigor.' },
+        { n: 'Deliverable 06', title: 'Client presentation', body: 'Co-presented findings to Signify and CVS leadership, translating 6 months of research into actionable design direction.' },
+      ],
+      outcomes: [
+        { value: '300+', label: 'Behavioral insights gathered, synthesized, categorized, and prioritized across the discovery cycle.' },
+        { value: '6', label: 'Design themes defined, each grounded in research evidence.' },
+        { value: '3', label: 'Actor groups mapped, each with distinct journeys, emotional arcs, and needs.' },
+        { value: '4', label: 'Major deliverables produced and used in the client presentation.' },
+        { value: 'AI', label: 'A synthesis approach that processed and clustered insights at scale.' },
+        { value: 'CVS', label: 'Findings presented to Signify and CVS Health leadership.' },
+      ],
+      lessons: [
+        { title: 'Trust is a design outcome, not a brand promise', body: 'You cannot tell people to trust a service. You design the moments where trust forms: the first communication, the explanation of who is coming, the clarity of what happens next. Each is a design decision.' },
+        { title: 'AI makes research faster, not cheaper', body: 'Using AI to process 300+ insights did not replace judgment, it freed it up. The machine clustered patterns; I decided which mattered and why. That combination is faster and more thorough than either alone.' },
+        { title: 'Emotional UX is the hardest to get right', body: 'Designing for anxiety, vulnerability, and hesitation meant modeling emotional states most UX frameworks handle poorly. Journey maps that track only tasks miss the most important data: how the person feels at each step.' },
+        { title: 'Systems thinking applies to service design', body: 'The experience was not broken at one touchpoint, it was broken at the level of how all the actors and communications related. Fixing one screen would fix nothing. You had to understand the whole system first.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

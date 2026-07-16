@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Octolux — Case Study — Dornaz Niknezhad</title>
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
+  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: #ffffff; }
+    a { color: var(--link-color); }
+    a:hover { color: var(--link-hover); }
+    @media (max-width: 900px) {
+      .np-card { grid-template-columns: 1fr !important; }
+      .np-card > div:last-child { min-height: 200px !important; order: -1; }
+      .cs-summary { grid-template-columns: 1fr !important; }
+      .cs-stats { grid-template-columns: repeat(2,1fr) !important; }
+      .cs-grid-2 { grid-template-columns: 1fr !important; }
+      .cs-grid-3 { grid-template-columns: 1fr !important; }
+      .cs-grid-4 { grid-template-columns: repeat(2,1fr) !important; }
+      .cs-split { grid-template-columns: 1fr !important; }
+      .ox-arch-row { grid-template-columns: 1fr !important; }
+      .ox-sol { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ffffff;" data-ox-root="">
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+
+  <section style="padding: 152px var(--space-8) 0; max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="accent" hint-size="auto,32px">Flagship · Shipped</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">#1 award-winning HMI in category</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">End-to-end product design</x-import>
+    </div>
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 24px;">Case study, Octolux</div>
+    <h1 style="font-family: var(--font-display-xl-family); font-weight: var(--font-display-xl-weight); font-size: var(--display-xl-size); line-height: var(--font-display-xl-leading); letter-spacing: -0.02em; color: var(--text-primary); margin: 0; max-width: 900px;">
+      A modular industrial UX ecosystem that cuts development time by up to 73%.
+    </h1>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin-top: 28px; max-width: 660px;">
+      I led and owned this product end to end, designing a modular industrial UX ecosystem that cuts embedded product development time by up to 73% and takes a machine from concept to validated production in 12 weeks.
+    </p>
+    <div style="display: flex; gap: var(--space-10); margin-top: var(--space-12); flex-wrap: wrap;">
+      <sc-for list="{{meta}}" as="m" hint-placeholder-count="5">
+        <div>
+          <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em;">{{m.label}}</div>
+          <div style="font: var(--text-body); font-weight: 600; color: var(--text-primary); margin-top: 4px;">{{m.value}}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: var(--space-16); border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); background: var(--surface-sunken); padding: 40px;">
+      <img src="uploads/pasted-1783546057756-0.png" alt="Octolux OC desktop app beside the award-winning embedded HMI" style="display: block; width: 100%; height: auto;">
+    </div>
+    <p style="font: var(--text-caption); color: var(--text-tertiary); margin-top: 14px;">The OC desktop configuration app and the embedded Octolux HMI, recognized as the #1 award-winning HMI in its category.</p>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div class="cs-stats" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; border-top: 1px solid var(--border-subtle); padding-top: 48px;">
+      <sc-for list="{{heroStats}}" as="h" hint-placeholder-count="4">
+        <div>
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup="">{{h.value}}</div>
+          <div style="font: var(--text-body); font-weight: 600; color: var(--text-primary); margin-top: 8px;">{{h.title}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 6px 0 0;">{{h.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <p style="font: var(--text-caption); color: var(--text-tertiary); margin: 20px 0 0; max-width: 720px;">Development and testing figures were measured internally by NTX Embedded after production rollout.</p>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 800px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">01 · Overview</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 20px; letter-spacing: -0.02em;">Not just a product, a complete development ecosystem.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin: 0 0 20px;">Octolux solves one of embedded engineering's oldest problems: why does it take six months just to test a new machine? Every time NTX Embedded started a new product, they rebuilt everything from scratch. Custom boards, firmware, UI, and testing tools. The testing process alone routinely took four to six months, burning time and talent on duplication instead of innovation.</p>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin: 0 0 20px;">I was brought in to design the UX system for Octolux RDS, the Rapid Development System. It bundles pre-validated hardware, firmware, and UI into a single ecosystem, so any PCB or machine is fully testable through the same software. The goal: concept to validated production in 12 weeks.</p>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin: 0;">This was a new concept with no direct precedent inside the company. I led the design from initial research through delivery, interviewing 10 engineers, 3 close collaborators, and 4 senior stakeholders including the CEO and VP of Engineering to validate both the problem and the solution.</p>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">02 · The problem</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">Six months to test a machine. There had to be a better way.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">The testing process was not just slow, it was structurally broken. The same problems repeated project after project with no shared solution.</p>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 18px;">Traditional development</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{problemsOld}}" as="p" hint-placeholder-count="6">
+            <div style="display: flex; gap: 12px; border-top: 1px solid var(--border-subtle); padding-top: 12px;"><span style="color: #DC2626; font-weight: 700; flex-shrink: 0;">✕</span><span style="font: var(--text-body-sm); color: var(--text-secondary);">{{p}}</span></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-accent-tint);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 18px;">Octolux RDS</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{problemsNew}}" as="p" hint-placeholder-count="6">
+            <div style="display: flex; gap: 12px; border-top: 1px solid rgba(59,110,246,0.16); padding-top: 12px;"><span style="color: #22C55E; font-weight: 700; flex-shrink: 0;">✓</span><span style="font: var(--text-body-sm); color: var(--text-primary);">{{p}}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">03 · Design challenges</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Three layers of complexity: technical, operational, and human.</h2>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;">
+      <sc-for list="{{challenges}}" as="c" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 10px;">{{c.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{c.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">04 · Research and discovery</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">We didn't design a solution. We researched one.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">Because this was a new concept, research was critical. I had to validate that the problem was real and prioritize which capabilities would actually change how engineers worked, before designing a single screen.</p>
+    <div class="cs-stats" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; border-top: 1px solid var(--border-default); padding-top: 40px; margin-bottom: 56px;">
+      <sc-for list="{{researchStats}}" as="rs" hint-placeholder-count="4">
+        <div>
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup="">{{rs.value}}</div>
+          <div style="font: var(--text-body-sm); color: var(--text-secondary); margin-top: 8px;">{{rs.label}}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{methods}}" as="mth" hint-placeholder-count="6">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 18px;">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{mth.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{mth.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">05 · The core design decision</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Split the system: one side for configuration, one for operation.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 720px; margin: 0 0 48px;">The most important decision was not visual, it was architectural. Research showed engineers mentally separated configuration from operation as different modes. So I designed two purpose-built connected systems. This also solved the performance problem: keeping configuration on the desktop keeps the embedded device lightweight and focused entirely on real-time data.</p>
+    <div class="cs-split" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px;">
+      <div style="border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 16px;">OC, desktop configuration app</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <sc-for list="{{ocFlow}}" as="f" hint-placeholder-count="6"><div style="display: flex; gap: 12px; border-top: 1px solid var(--border-subtle); padding-top: 10px;"><span style="color: var(--text-accent); flex-shrink: 0;">→</span><span style="font: var(--text-body-sm); color: var(--text-secondary);">{{f}}</span></div></sc-for>
+        </div>
+      </div>
+      <div style="border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 16px;">HMI, embedded operation interface</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <sc-for list="{{hmiFlow}}" as="f" hint-placeholder-count="6"><div style="display: flex; gap: 12px; border-top: 1px solid var(--border-subtle); padding-top: 10px;"><span style="color: var(--text-accent); flex-shrink: 0;">→</span><span style="font: var(--text-body-sm); color: var(--text-secondary);">{{f}}</span></div></sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); background: #0c0d0f;">
+      <img src="uploads/pasted-1783545337965-0.png" alt="OC desktop app on the left and Octolux HMI on the right, running simultaneously" style="display: block; width: 100%; height: auto;">
+    </div>
+    <p style="font: var(--text-caption); color: var(--text-tertiary); text-align: center; margin-top: 14px;">OC desktop app on the left, Octolux HMI on the right. Configure on the desktop, operate on the device.</p>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">06 · My role</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">I led and owned this product end to end.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">This was not a project where I received specs and designed screens. I was the sole designer and product UX lead, responsible for strategy, research, system architecture, interaction design, design systems, validation UX, and cross-team coordination across the full development cycle.</p>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{roleCards}}" as="rc" hint-placeholder-count="6">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{rc.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{rc.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">07 · Systems architecture</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">Five modular layers, each reusable, each composable.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">A new industrial product joins the platform by configuring the existing layers, not rebuilding them. This is what enables the 73% development time reduction.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px;">
+      <sc-for list="{{archLayers}}" as="l" hint-placeholder-count="5">
+        <div class="ox-arch-row" style="display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: center; border: 1px solid {{l.border}}; border-radius: var(--radius-lg); padding: 20px 24px; background: {{l.bg}};">
+          <div><div style="font: var(--text-h4); color: {{l.labelColor}};">{{l.name}}</div><div style="font: var(--text-caption); color: var(--text-tertiary); margin-top: 4px;">{{l.tag}}</div></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <sc-for list="{{l.items}}" as="it" hint-placeholder-count="5"><span style="font: var(--text-caption); color: var(--text-primary); background: var(--surface-card); border: 1px solid var(--border-subtle); border-radius: 999px; padding: 6px 14px;">{{it}}</span></sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-left: 3px solid var(--border-accent); padding-left: 24px; max-width: 760px;">
+      <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 8px;">Why modularity changes everything</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0;">Traditional development rebuilds all five layers for every product. With Octolux RDS a new product joins by configuring only the top two layers, UI and software, while hardware abstraction, firmware, and hardware stay pre-validated and reusable. That is the architectural source of the 73% reduction: engineers stop rebuilding infrastructure and start building products.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">08 · Design solutions</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Three connected products. One design system.</h2>
+    <div style="display: flex; flex-direction: column; gap: 40px;">
+      <sc-for list="{{solutions}}" as="s" hint-placeholder-count="4">
+        <div class="ox-sol" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 32px; background: var(--surface-card);">
+          <div>
+            <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 8px;">{{s.kicker}}</div>
+            <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 14px;">{{s.title}}</h3>
+            <p style="font: var(--text-body); color: var(--text-secondary); margin: 0 0 20px;">{{s.body}}</p>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <sc-for list="{{s.bullets}}" as="b" hint-placeholder-count="4"><div style="display: flex; gap: 12px; border-top: 1px solid var(--border-subtle); padding-top: 10px;"><span style="color: var(--text-accent); flex-shrink: 0;">·</span><span style="font: var(--text-body-sm); color: var(--text-secondary);">{{b}}</span></div></sc-for>
+            </div>
+          </div>
+          <sc-if value="{{s.img}}" hint-placeholder-val="{{false}}">
+            <div role="img" style="aspect-ratio: 16/10; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); background: #0c0d0f center / contain no-repeat url({{s.img}}); padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-width: 0px"></div>
+          </sc-if>
+          <sc-if value="{{s.noImg}}" hint-placeholder-val="{{true}}">
+            <div style="aspect-ratio: 4/3; border-radius: var(--radius-lg); background: #14161a; border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px;"><span style="font: var(--text-caption); color: #6f7681;">{{s.placeholder}}</span></div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">The system in practice</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Diagnostics that any team can run.</h2>
+    <div class="cs-split" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+      <div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); background: #0c0d0f;"><img src="uploads/pasted-1783545420592-0.png" alt="IO board diagnostics with digital inputs, outputs, and PWM" style="display: block; width: 100%; height: auto;"></div>
+        <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 16px 0 0;">IO board live view: digital inputs and outputs, PWM channels, and fault status, all controllable without firmware support.</p>
+      </div>
+      <div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); background: #0c0d0f;"><img src="uploads/pasted-1783545486411-0.png" alt="Diagnostic history log with auto and manual runs" style="display: block; width: 100%; height: auto;"></div>
+        <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 16px 0 0;">Diagnostic history: auto and manual runs logged with date, type, and summary, so QA can trace every test cycle independently.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">09 · UX strategy</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Six principles that guided every decision.</h2>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{principles}}" as="p" hint-placeholder-count="6">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 18px;">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{p.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{p.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">10 · Project timeline</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">A new concept needed a longer definition phase.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">When there is no existing product to improve, you validate the concept itself before designing it. The extended definition phase was not a delay, it was the most important work.</p>
+    <div class="cs-grid-4" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;">
+      <sc-for list="{{timeline}}" as="t" hint-placeholder-count="4">
+        <div style="border-top: 3px solid var(--border-accent); padding-top: 18px;">
+          <div style="font: var(--text-caption); font-weight: 700; color: var(--text-accent); margin-bottom: 4px;">{{t.dur}}</div>
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 12px;">{{t.phase}}</h4>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <sc-for list="{{t.items}}" as="it" hint-placeholder-count="4"><span style="font: var(--text-body-sm); color: var(--text-secondary); border-top: 1px solid var(--border-subtle); padding-top: 8px;">{{it}}</span></sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">11 · System documentation</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">A documented UX system, not just a finished product.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">One explicit deliverable was ensuring the platform could be handed off and extended by engineers and future designers without me in the room. Documentation was a design artifact, not an afterthought.</p>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{docs}}" as="d" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 16px;">{{d.title}}</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <sc-for list="{{d.items}}" as="it" hint-placeholder-count="4"><span style="font: var(--text-body-sm); color: var(--text-secondary); border-top: 1px solid var(--border-subtle); padding-top: 10px;">{{it}}</span></sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">12 · Impact and results</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Measurable outcomes across speed, manufacturing, and reach.</h2>
+    <div class="cs-stats" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; margin-bottom: 56px;">
+      <sc-for list="{{impact}}" as="im" hint-placeholder-count="4">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 20px;">
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup="">{{im.value}}</div>
+          <div style="font: var(--text-body); font-weight: 600; color: var(--text-primary); margin-top: 8px;">{{im.title}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 6px 0 0;">{{im.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-sunken); max-width: 860px;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">Beyond the numbers</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0 0 16px;">The 73% reduction is the headline, but the deeper impact is that the platform changed what NTX Embedded could attempt. Products that would have needed six-month cycles can now be validated in 12 weeks, opening market opportunities that were not economically viable before.</p>
+      <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">The QA independence unlocked by the Board Diagnostics View removed a structural bottleneck treated as immovable for years. Manufacturing teams no longer need a firmware engineer present to run validation, a compounding efficiency that improves with every product added to the platform.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--section-padding-y); max-width: 896px; margin: 0 auto; opacity: 1; z-index: 0; width: 985px; height: 205px; padding-top: 46px; padding-right: 46px; padding-bottom: 46px; padding-left: 46px; margin-top: 39px; margin-right: 201px; margin-bottom: 39px; margin-left: 201px">
+    <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-accent-tint);">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">How it was built</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0;">The production front end was AI-generated. I prototyped the interface with AI-assisted tooling and handed it to engineering as ready-to-use CSS, so the validated design shipped without a separate rebuild step between design and development.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">13 · What I learned</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 780px;">Designing a new concept is a different kind of problem.</h2>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-bottom: 48px;">
+      <sc-for list="{{lessons}}" as="l" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 10px;">{{l.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{l.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="max-width: 800px;">
+      <p style="font-family: var(--font-display-italic-family); font-style: italic; font-size: var(--display-italic-size); line-height: var(--font-display-italic-leading); color: var(--text-primary); margin: 0;">"Platform design is as much about defining what belongs where as designing individual screens. The hardest work is not making things look right. It is making the right calls about what goes where, with the research to back them when everyone in the room has a different opinion."</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--space-16); max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin: var(--section-padding-y) 0 40px;">
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="accent" hint-size="auto,32px">AI product design</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Enterprise platform</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Embedded HMI</x-import>
+    </div>
+    <a href="KoolLogik.dc.html" class="np-card" style="display: grid; grid-template-columns: 1fr 300px; align-items: stretch; border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); overflow: hidden; text-decoration: none; color: inherit; background: var(--surface-card); box-shadow: var(--shadow-xs); transition: box-shadow 0.25s ease, transform 0.25s ease;" style-hover="box-shadow: var(--shadow-lg); transform: translateY(-4px);">
+      <div style="padding: 40px 44px;">
+        <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">Next case study</div>
+        <div style="font: var(--text-h3); color: var(--text-primary); margin-bottom: 20px; letter-spacing: -0.01em;">KoolLOGIK: industrial refrigeration, reimagined</div>
+        <span style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-body-sm); font-weight: 600; color: var(--text-accent);">View case study &rarr;</span>
+      </div>
+      <div style="background: var(--surface-sunken) center / cover no-repeat url(uploads/cooler-2.png); min-height: 200px;"></div>
+    </a>
+  </section>
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    try {
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const root = document.querySelector('[data-ox-root]') || document;
+      const countUp = (el) => {
+        const raw = el.getAttribute('data-countup-raw') || el.textContent;
+        el.setAttribute('data-countup-raw', raw);
+        const nums = raw.match(/\d[\d,\.]*/g);
+        if (!nums || nums.length !== 1) return;
+        const numStr = nums[0];
+        const target = parseFloat(numStr.replace(/,/g, ''));
+        if (!isFinite(target)) return;
+        const isFloat = numStr.indexOf('.') >= 0;
+        const dur = 1200, t0 = performance.now();
+        const tick = (now) => {
+          const p = Math.min(1, (now - t0) / dur);
+          const e = 1 - Math.pow(1 - p, 3);
+          const cur = isFloat ? (target * e).toFixed(1) : Math.round(target * e).toLocaleString();
+          el.textContent = raw.replace(numStr, cur);
+          if (p < 1) requestAnimationFrame(tick); else el.textContent = raw;
+        };
+        requestAnimationFrame(tick);
+      };
+      const sections = Array.prototype.slice.call(root.querySelectorAll('section'));
+      if (reduce || !('IntersectionObserver' in window)) return;
+      const staggerSelector = '.cs-grid-2 > *, .cs-grid-3 > *, .cs-grid-4 > *, .cs-stats > *, .cs-split > *, .ox-arch-row, .ox-sol';
+      sections.forEach((s) => {
+        s.style.opacity = '0';
+        s.style.transform = 'translateY(28px)';
+        s.style.transition = 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+        s.style.willChange = 'opacity, transform';
+        var kids = s.querySelectorAll(staggerSelector);
+        for (var k = 0; k < kids.length; k++) {
+          kids[k].style.opacity = '0';
+          kids[k].style.transform = 'translateY(20px)';
+          kids[k].style.transition = 'opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1)';
+        }
+      });
+      const revealKids = (section) => {
+        const kids = section.querySelectorAll(staggerSelector);
+        for (let i = 0; i < kids.length; i++) {
+          kids[i].style.transitionDelay = (i * 70) + 'ms';
+          kids[i].style.opacity = '1';
+          kids[i].style.transform = 'none';
+        }
+      };
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.style.opacity = '1';
+            en.target.style.transform = 'none';
+            revealKids(en.target);
+            const stats = en.target.querySelectorAll('[data-countup]');
+            for (let i = 0; i < stats.length; i++) countUp(stats[i]);
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+      sections.forEach((s) => io.observe(s));
+      setTimeout(() => {
+        sections.forEach((s) => {
+          if (getComputedStyle(s).opacity === '0') {
+            s.style.opacity = '1';
+            s.style.transform = 'none';
+            revealKids(s);
+            const stats = s.querySelectorAll('[data-countup]');
+            for (let i = 0; i < stats.length; i++) countUp(stats[i]);
+          }
+        });
+      }, 700);
+    } catch (e) { /* fail open */ }
+  }
+  renderVals() {
+    return {
+      navLinks: [
+        { label: 'Home', href: 'Home.dc.html' },
+        { label: 'About', href: 'About.dc.html' },
+      ],
+      footerLinks: [
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dornaz-niknezhad/', icon: 'linkedin' },
+        { label: 'GitHub', href: 'https://github.com/dornaz-nk', icon: 'github' },
+      ],
+      meta: [
+        { label: 'Role', value: 'Lead product UX designer' },
+        { label: 'Ownership', value: 'End to end' },
+        { label: 'Team', value: 'NTX Embedded' },
+        { label: 'Platform', value: 'Desktop, embedded, browser' },
+        { label: 'Recognition', value: '#1 award-winning HMI' },
+      ],
+      heroStats: [
+        { value: '73%', title: 'Faster development', body: 'Reduction in embedded product development cost and time.' },
+        { value: '12wks', title: 'Concept to validated product', body: 'Engineers define and fully validate an AI-powered HMI system.' },
+        { value: '80%', title: 'Faster testing', body: 'Manufacturing validation workflow improvement, NTX measured after production rollout.' },
+        { value: '#1', title: 'Award-winning HMI', body: 'Recognized as the top HMI platform in its category.' },
+      ],
+      problemsOld: [
+        'Hardware and firmware developed in isolation, the firmware team waits months for hardware',
+        'PoC and EVT phases overlap unplanned, creating schedule risk and rework',
+        'Four to six months of testing before a product is validated',
+        'Every new project rebuilds the same architecture from scratch',
+        'Diagnostics require expert firmware engineers to interpret, QA cannot work independently',
+        'No standardized testing platform, inconsistent results across teams',
+      ],
+      problemsNew: [
+        'PoC and EVT bonded, effort combined in Sprint 1, hardware and firmware co-developed in parallel',
+        'Structured sprint cycles, 12 weeks to DVT, 12 weeks to a 1.0 production release',
+        'Pre-validated modular building blocks, engineers configure instead of rebuild',
+        'Any PCB or machine testable through the same software without redevelopment',
+        'Board Diagnostics View surfaces answers directly, QA and manufacturing run independently',
+        'A single standardized platform across all product lines, consistent and reusable',
+      ],
+      challenges: [
+        { title: 'Infinite machine variability', body: 'Every machine has different boards, sensors, actuators, and I/O. The platform had to work with any hardware combination without custom UI per product.' },
+        { title: 'Two very different user types', body: 'Control engineers need deep configuration power. Operators need fast, clear, real-time data. One monolithic interface cannot serve both well.' },
+        { title: 'HMI performance constraints', body: 'Embedded devices have limited processing power. Loading configuration logic onto the HMI would slow the real-time data rendering that matters most during operation.' },
+        { title: 'Diagnostics needed to be self-serve', body: 'Every test cycle required a firmware engineer to interpret results. That bottleneck was a primary cause of the long timeline. The interface had to surface answers, not raw data.' },
+      ],
+      researchStats: [
+        { value: '10', label: 'Engineer interviews' },
+        { value: '3', label: 'Deep collaboration partners' },
+        { value: '4', label: 'Senior stakeholder sessions' },
+        { value: '6', label: 'Product workflows mapped' },
+      ],
+      methods: [
+        { title: 'Engineer interviews', body: 'Semi-structured contextual interviews with 10 control engineers, focused on where time was lost and what made each project feel like starting over.' },
+        { title: 'Competitive and past-product analysis', body: 'Benchmarked Siemens, Beckhoff, and Schneider HMI platforms, and analyzed prior NTX Embedded projects for recurring pain patterns.' },
+        { title: 'Card sorting and prioritization', body: 'Structured sessions to see how engineers mentally organize configuration versus operation, used to define the OC/HMI split.' },
+        { title: 'Prototype validation', body: 'Usability testing with low-fidelity wireframes. Engineers ran simulated setup and diagnostic flows before any high-fidelity work.' },
+        { title: 'Stakeholder alignment', body: 'Four sessions with the CEO, VP of Engineering, and product leads to validate the problem and secure buy-in for the architecture.' },
+        { title: 'Workflow mapping', body: 'Mapped end-to-end workflows across 6 product types, from first hardware connect to manufacturing sign-off, surfacing 9 distinct pain points.' },
+      ],
+      ocFlow: [
+        'Engineer selects hardware elements: boards, sensors, actuators, modules',
+        'Configures sensor logic, functions, thresholds, and behaviors',
+        'Maps I/O and defines control parameters step by step',
+        'Saves the complete configuration as a portable JSON file',
+        'Sends the JSON to the HMI, no manual setup on the device',
+        'Full desktop power for complex configuration workflows',
+      ],
+      hmiFlow: [
+        'Receives the JSON config from OC automatically, zero manual setup',
+        'Renders real-time sensor data, temperatures, motor states, and alarms',
+        'Surfaces Edge AI diagnostic conclusions, answers rather than raw numbers',
+        'Operator-focused: clear, fast, designed for glanceability under pressure',
+        'Runs cleaning workflows, maintenance schedules, and system tests',
+        'Lightweight by design, no configuration logic, maximum render speed',
+      ],
+      roleCards: [
+        { title: 'Product strategy', body: 'Defined the OC and HMI split, the JSON config model, and the scalability logic that makes the platform work across any machine type.' },
+        { title: 'UX research', body: '10 engineer interviews, competitive analysis, past customer feedback, card sorting, feature prioritization, and usability testing.' },
+        { title: 'System architecture', body: 'Designed the five modular layers: UI, software stack, hardware abstraction, firmware bridge, and Edge AI integration.' },
+        { title: 'Interaction design', body: 'End-to-end design for the OC desktop app, the HMI, Board Diagnostics, Motor Control, and the Cleaning Workflow.' },
+        { title: 'Design system', body: 'Built the Octolux system from scratch: dark industrial theme, orange accent system, component library, and interaction patterns.' },
+        { title: 'Cross-team coordination', body: 'Worked directly with firmware, hardware, QA, and senior stakeholders to validate designs against technical and business constraints.' },
+      ],
+      archLayers: [
+        { name: 'UI layer', tag: 'Configured per product', items: ['HMI framework', 'OC config app', 'Interaction models', 'Alarm hierarchy', 'Design system'], bg: 'var(--surface-accent-tint)', border: 'var(--border-accent)', labelColor: 'var(--text-accent)' },
+        { name: 'Software', tag: 'Configured per product', items: ['Linux / RTOS', 'React / Electron', 'JSON config engine', 'WebSocket bridge', 'Edge AI runtime'], bg: 'var(--surface-accent-tint)', border: 'var(--border-accent)', labelColor: 'var(--text-accent)' },
+        { name: 'Hardware abstraction', tag: 'Pre-validated, reusable', items: ['Board drivers', 'Sensor APIs', 'I/O mapping', 'Firmware interface', 'Device registry'], bg: 'var(--surface-card)', border: 'var(--border-subtle)', labelColor: 'var(--text-primary)' },
+        { name: 'Firmware', tag: 'Pre-validated, reusable', items: ['Pre-validated modules', 'OTA updates', 'Fault detection', 'Safety interlocks', 'Calibration'], bg: 'var(--surface-card)', border: 'var(--border-subtle)', labelColor: 'var(--text-primary)' },
+        { name: 'Hardware', tag: 'Pre-validated, reusable', items: ['UCB board', 'Temp board', 'I/O board', 'Accelerometer BD', 'Relay BD'], bg: 'var(--surface-card)', border: 'var(--border-subtle)', labelColor: 'var(--text-primary)' },
+      ],
+      solutions: [
+        { kicker: 'OC, desktop configuration app', title: 'Hardware selection wizard', body: 'Engineers select the hardware they need through a visual grid, with steppers for boards that appear multiple times. A single-step selection replaces hours of manual I/O mapping.', bullets: ['Visual hardware selection, no wiring-diagram lookup', 'Quantity steppers for multi-board configurations', 'Toggle selection for peripheral modules', 'Linear back-and-next wizard flow, error-resistant'], img: 'uploads/pasted-1783546008712-0.png' },
+        { kicker: 'Octolux HMI, embedded interface', title: 'Board diagnostics view', body: 'The most technically complex screen. It surfaces real-time sensor data so QA and manufacturing can act without firmware expertise. A board panel on the left, live grouped data on the right.', bullets: ['Board-level navigation: IO, Temp, Relay, Universal, Accelerometer', 'Grouped sensor panels: NTC, thermocouples, RTC, board temp', 'Color-coded status: green OK, red fault, gray disabled', 'Live update latency of 12ms, real-time without compromise'], img: 'uploads/pasted-1783545350646-0.png' },
+        { kicker: 'Octolux HMI, embedded interface', title: 'Motor control view', body: 'For operators monitoring rotating machinery. Tabbed navigation keeps focus on the relevant system, and a live multi-layer chart surfaces Edge AI patterns before they become failures.', bullets: ['Speed toggle with medium, high, low, glove-compatible targets', 'Six live readouts: RPM, run time, noise, vibration, status, temp', 'Edge AI area chart of sensor patterns over time', 'Alert surface: abnormal vibration detected, inspection recommended'], img: 'uploads/pasted-1783545467987-0.png' },
+        { kicker: 'Octolux HMI, embedded interface', title: 'Cleaning workflow', body: 'Handles maintenance for three cleaning types. Each card shows cycle count, last-cleaned date, a large start button, and a contextual instruction. Maintenance becomes self-serve, no technician needed.', bullets: ['Three cleaning types with distinct instructions', 'Cycle counter and last-cleaned timestamp for scheduling', 'Large centered start button, impossible to miss', 'Contextual warning text explains what will happen'], img: 'uploads/pasted-1783545364409-0.png' },
+      ],
+      principles: [
+        { title: 'Separate complexity from operation', body: 'Configuration complexity belongs on the desktop. The HMI should be focused and fast. The split enforces this at the architecture level.' },
+        { title: 'Diagnostics give answers, not data', body: 'Engineers should not interpret raw values to know what is wrong. Edge AI analyzes live data and surfaces conclusions, meaning rather than numbers.' },
+        { title: 'Operational clarity first', body: 'Every HMI screen was judged against one question: can an operator understand machine state in under two seconds?' },
+        { title: 'Configure once, deploy everywhere', body: 'A config file made in OC deploys to any machine of the same type without modification. The JSON architecture enforces that portability.' },
+        { title: 'Design for the worst-case environment', body: 'Dark backgrounds, high-contrast accents, large targets, and minimal reading all serve loud, bright, high-stress industrial floors.' },
+        { title: 'The platform must scale without custom work', body: 'Every new product should work within existing components and layers. If onboarding needs custom UI, the platform has failed its purpose.' },
+      ],
+      timeline: [
+        { dur: '4 weeks', phase: 'Discovery', items: ['10 engineer interviews', 'Competitive analysis', 'Past product review', 'Problem validation with leadership'] },
+        { dur: '8 weeks, longest phase', phase: 'Definition', items: ['OC/HMI architecture decision', 'JSON config model design', 'Card sorting and prioritization', 'Lo-fi prototype validation'] },
+        { dur: '10 weeks', phase: 'Design', items: ['OC desktop app interaction design', 'HMI embedded interface, all screens', 'Board Diagnostics View', 'Design system creation'] },
+        { dur: '6 weeks', phase: 'Delivery', items: ['Handoff documentation', 'Engineering implementation support', 'Validation with real machines', 'Manufacturing workflow testing'] },
+      ],
+      docs: [
+        { title: 'Component library', items: ['Every OC and HMI component with usage guidelines and variants', 'Dark industrial theme with an orange accent token system', 'Touch-target specs for embedded displays', 'Typography hierarchy for desktop versus embedded'] },
+        { title: 'Interaction specifications', items: ['JSON config model, data structure and field definitions', 'OC to HMI communication flow with error states', 'Board Diagnostics update cycle and refresh-rate specs', 'Alarm hierarchy and escalation behavior'] },
+        { title: 'Engineering handoff', items: ['Screen-by-screen annotation with state machines', 'Hardware-abstraction interaction model for firmware', 'Platform onboarding guide for new product types', 'Edge AI data-contract specifications'] },
+      ],
+      impact: [
+        { value: '73%', title: 'Development cost reduction', body: 'Through pre-validated modular building blocks that replace rebuilding.' },
+        { value: '12wks', title: 'Concept to validated product', body: 'Down from four to six months for a full AI-powered control system.' },
+        { value: '80%', title: 'Faster testing workflow', body: 'QA teams run complete cycles independently, without engineering.' },
+        { value: '#1', title: 'Award-winning HMI', body: 'Top HMI platform in its category, validating the approach industry-wide.' },
+      ],
+      lessons: [
+        { title: 'The best decisions are architectural, not visual', body: 'The OC/HMI split was a systems decision. Separating configuration from operation made every screen easier to design and every machine easier to support. Architecture is UX.' },
+        { title: 'New concepts need longer definition phases', body: 'With no existing product to improve, you validate the concept before designing it. Rushing to high fidelity on an unvalidated concept is how you build the wrong product confidently.' },
+        { title: 'Diagnostics should give answers', body: 'Engineers spent real time interpreting raw fault data. That reframed the HMI as a translator, not just a window. Edge AI making that translation automatic redefined good diagnostics UX.' },
+        { title: 'Constraints that feel limiting improve both systems', body: 'Keeping configuration off the HMI felt limiting. In practice it made the HMI faster, the OC more powerful, and the whole system more maintainable.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

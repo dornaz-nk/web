@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NURA — Case Study — Dornaz Niknezhad</title>
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/shadows.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/styles.css">
+  <script src="_ds/dornaz-design-system-1658b63f-5166-43a4-add3-4ab4892311ea/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: #ffffff; }
+    a { color: var(--link-color); }
+    a:hover { color: var(--link-hover); }
+    @media (max-width: 900px) {
+      .np-card { grid-template-columns: 1fr !important; }
+      .np-card > div:last-child { min-height: 200px !important; order: -1; }
+      .cs-summary { grid-template-columns: 1fr !important; }
+      .cs-stats { grid-template-columns: repeat(2,1fr) !important; }
+      .cs-grid-2 { grid-template-columns: 1fr !important; }
+      .cs-grid-3 { grid-template-columns: 1fr !important; }
+      .nura-personas { grid-template-columns: 1fr !important; }
+      .nura-dual { grid-template-columns: 1fr !important; }
+      .nura-dec { grid-template-columns: 1fr !important; gap: 8px !important; }
+      .nura-comp { display: block !important; overflow-x: auto; }
+      .nura-spec-c { padding: 12px 20px !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ffffff;" data-nura-root>
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.NavBar" name="Dornaz" logo-src="assets/logo-icon-blue.png" links="{{navLinks}}" hint-size="100%,64px"></x-import>
+
+  <section style="padding: 152px var(--space-8) 0; max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="accent" hint-size="auto,32px">UNT M.A. thesis · 2025</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">AI system design</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Privacy by design</x-import>
+    </div>
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-accent); margin-bottom: 24px;">Case study, NURA</div>
+    <h1 style="font-family: var(--font-display-xl-family); font-weight: var(--font-display-xl-weight); font-size: var(--display-xl-size); line-height: var(--font-display-xl-leading); letter-spacing: -0.02em; color: var(--text-primary); margin: 0; max-width: 900px;">
+      Designing an adaptive sleep intelligence layer people actually trust.
+    </h1>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); margin-top: 28px; max-width: 660px;">
+      A multi-device platform that senses biometric data, learns your sleep patterns, and adjusts your environment on its own, with a generative AI layer that explains every change in plain language. It senses, learns, and adapts.
+    </p>
+    <div style="display: flex; gap: var(--space-10); margin-top: var(--space-12); flex-wrap: wrap;">
+      <sc-for list="{{meta}}" as="m" hint-placeholder-count="5">
+        <div>
+          <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em;">{{m.label}}</div>
+          <div style="font: var(--text-body); font-weight: 600; color: var(--text-primary); margin-top: 4px;">{{m.value}}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: var(--space-16); aspect-ratio: 3 / 2; border-radius: var(--radius-xl); background: #1a1712 center / cover no-repeat url(uploads/pasted-1783530312936-0.png); border: 1px solid var(--border-subtle);"></div>
+    <p style="font: var(--text-caption); color: var(--text-tertiary); margin-top: 14px;">Night mode on the phone, glanceable companion on the wrist. The environment is set before the user is even in bed.</p>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 24px;">In 30 seconds</div>
+    <div class="cs-summary" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{summary}}" as="s" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">{{s.label}}</div>
+          <p style="font: var(--text-body); color: var(--text-primary); margin: 0;">{{s.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">01 · The problem</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 20px; letter-spacing: -0.02em; max-width: 820px;">
+      Sleep technology doesn't have a data problem. It has an action problem.
+    </h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">
+      In 2025, 1 in 3 adults sleep poorly, not because they lack tracking devices, but because those devices never work together, never act on what they know, and never help the user understand what to change.
+    </p>
+    <div class="cs-stats" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; border-top: 1px solid var(--border-default); padding-top: 40px; margin-bottom: 48px;">
+      <sc-for list="{{problemStats}}" as="ms" hint-placeholder-count="4">
+        <div>
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup>{{ms.value}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 8px 0 4px;">{{ms.body}}</p>
+          <div style="font: var(--text-caption); color: var(--text-tertiary);">{{ms.source}}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-left: 3px solid var(--border-accent); padding-left: 24px; max-width: 720px; margin-bottom: 48px;">
+      <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 8px;">Design opportunity</div>
+      <p style="font: var(--text-h4); color: var(--text-primary); margin: 0; font-weight: 500;">How might we move users from passive sleep tracking to active, personalized sleep improvement, without adding complexity, friction, or cognitive load?</p>
+    </div>
+    <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; max-width: 720px; background: var(--surface-card);">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 12px;">Before NURA: too much data, no action</div>
+      <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">Leila owns a smartwatch, sleep app, thermostat, and white noise machine. Every device collects data. None work together. Every morning she sees charts, but no answer to why she slept poorly. Technology has become another source of stress.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--section-padding-y); max-width: 1280px; margin: 0 auto;">
+    <div style="background: #0f1a30; border-radius: var(--radius-xl); padding: 56px var(--space-8) 40px; overflow: hidden;">
+      <div style="max-width: 1120px; margin: 0 auto;">
+        <div style="font: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: #5BB8F5; margin-bottom: 16px;">The vision</div>
+        <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: #ffffff; margin: 0 0 16px; letter-spacing: -0.02em; max-width: 760px;">One intelligence layer. Every device in the bedroom, finally talking.</h2>
+        <p style="font: var(--text-body-lg); color: #9db4d6; max-width: 620px; margin: 0 0 8px;">NURA doesn't add another gadget. It sits in the middle of the ones you already own, senses what they see, and acts as a single system while you sleep.</p>
+      </div>
+      <svg viewBox="0 0 1000 560" style="width: 100%; height: auto; display: block; max-width: 900px; margin: 8px auto 0;" role="img" aria-label="Diagram: six bedroom devices connecting into the central NURA intelligence layer">
+        <g fill="none" stroke-linecap="round">
+          <line x1="500" y1="92" x2="500" y2="280" stroke="#5BB8F5" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="2 10"><animate attributeName="stroke-dashoffset" values="0;-48" dur="1.6s" repeatCount="indefinite"/></line>
+          <line x1="838" y1="185" x2="500" y2="280" stroke="#5BB8F5" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="2 10"><animate attributeName="stroke-dashoffset" values="0;-48" dur="1.6s" begin="0.25s" repeatCount="indefinite"/></line>
+          <line x1="838" y1="375" x2="500" y2="280" stroke="#5BB8F5" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="2 10"><animate attributeName="stroke-dashoffset" values="0;-48" dur="1.6s" begin="0.5s" repeatCount="indefinite"/></line>
+          <line x1="500" y1="468" x2="500" y2="280" stroke="#5BB8F5" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="2 10"><animate attributeName="stroke-dashoffset" values="0;-48" dur="1.6s" begin="0.75s" repeatCount="indefinite"/></line>
+          <line x1="162" y1="375" x2="500" y2="280" stroke="#5BB8F5" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="2 10"><animate attributeName="stroke-dashoffset" values="0;-48" dur="1.6s" begin="1s" repeatCount="indefinite"/></line>
+          <line x1="162" y1="185" x2="500" y2="280" stroke="#5BB8F5" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="2 10"><animate attributeName="stroke-dashoffset" values="0;-48" dur="1.6s" begin="1.25s" repeatCount="indefinite"/></line>
+        </g>
+        <g>
+          <circle r="4.5" fill="#8fd4ff"><animateMotion dur="2s" repeatCount="indefinite" path="M500 92 L500 280"/></circle>
+          <circle r="4.5" fill="#8fd4ff"><animateMotion dur="2s" begin="0.3s" repeatCount="indefinite" path="M838 185 L500 280"/></circle>
+          <circle r="4.5" fill="#8fd4ff"><animateMotion dur="2s" begin="0.6s" repeatCount="indefinite" path="M838 375 L500 280"/></circle>
+          <circle r="4.5" fill="#8fd4ff"><animateMotion dur="2s" begin="0.9s" repeatCount="indefinite" path="M500 468 L500 280"/></circle>
+          <circle r="4.5" fill="#8fd4ff"><animateMotion dur="2s" begin="1.2s" repeatCount="indefinite" path="M162 375 L500 280"/></circle>
+          <circle r="4.5" fill="#8fd4ff"><animateMotion dur="2s" begin="1.5s" repeatCount="indefinite" path="M162 185 L500 280"/></circle>
+        </g>
+        <g font-family="Manrope, system-ui, sans-serif" text-anchor="middle">
+          <g><circle cx="500" cy="92" r="40" fill="#16233f" stroke="#5BB8F5" stroke-width="1.4"/><circle cx="500" cy="92" r="5" fill="#5BB8F5"/><text x="500" y="22" fill="#e4eefb" font-size="19" font-weight="600">iPhone</text><text x="500" y="44" fill="#8fa6c8" font-size="13">dashboard + AI</text></g>
+          <g><circle cx="838" cy="185" r="40" fill="#16233f" stroke="#5BB8F5" stroke-width="1.4"/><circle cx="838" cy="185" r="5" fill="#5BB8F5"/><text x="838" y="250" fill="#e4eefb" font-size="19" font-weight="600">Smart bed</text><text x="838" y="272" fill="#8fa6c8" font-size="13">temp + firmness</text></g>
+          <g><circle cx="838" cy="375" r="40" fill="#16233f" stroke="#5BB8F5" stroke-width="1.4"/><circle cx="838" cy="375" r="5" fill="#5BB8F5"/><text x="838" y="440" fill="#e4eefb" font-size="19" font-weight="600">Room sensors</text><text x="838" y="462" fill="#8fa6c8" font-size="13">light + air</text></g>
+          <g><circle cx="500" cy="468" r="40" fill="#16233f" stroke="#5BB8F5" stroke-width="1.4"/><circle cx="500" cy="468" r="5" fill="#5BB8F5"/><text x="500" y="533" fill="#e4eefb" font-size="19" font-weight="600">Thermostat</text><text x="500" y="555" fill="#8fa6c8" font-size="13">climate</text></g>
+          <g><circle cx="162" cy="375" r="40" fill="#16233f" stroke="#5BB8F5" stroke-width="1.4"/><circle cx="162" cy="375" r="5" fill="#5BB8F5"/><text x="162" y="440" fill="#e4eefb" font-size="19" font-weight="600">Sound</text><text x="162" y="462" fill="#8fa6c8" font-size="13">white noise</text></g>
+          <g><circle cx="162" cy="185" r="40" fill="#16233f" stroke="#5BB8F5" stroke-width="1.4"/><circle cx="162" cy="185" r="5" fill="#5BB8F5"/><text x="162" y="250" fill="#e4eefb" font-size="19" font-weight="600">Apple Watch</text><text x="162" y="272" fill="#8fa6c8" font-size="13">biometrics</text></g>
+          <circle cx="500" cy="280" r="66" fill="none" stroke="#5BB8F5" stroke-width="2"><animate attributeName="r" values="66;122" dur="3.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.55;0" dur="3.4s" repeatCount="indefinite"/></circle>
+          <circle cx="500" cy="280" r="66" fill="none" stroke="#5BB8F5" stroke-width="2"><animate attributeName="r" values="66;122" dur="3.4s" begin="1.7s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.55;0" dur="3.4s" begin="1.7s" repeatCount="indefinite"/></circle>
+          <circle cx="500" cy="280" r="62" fill="#3B6EF6"/>
+          <text x="500" y="276" fill="#ffffff" font-size="30" font-weight="700">NURA</text><text x="500" y="298" fill="#cfe0ff" font-size="12" letter-spacing="2">SLEEP OS</text>
+        </g>
+      </svg>
+      <p style="font: var(--text-caption); color: #7f97bc; text-align: center; margin: 24px auto 0; max-width: 620px;">Biometrics flow in from every device. NURA reads them together and adjusts the room, in real time, without a single tap.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">02 · Research and discovery</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">Understanding sleep as a system problem.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 680px; margin: 0 0 48px;">24 user interviews, a review of the sleep-science literature, and a map of the devices people already own but can't integrate.</p>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-bottom: 56px;">
+      <sc-for list="{{methods}}" as="mth" hint-placeholder-count="4">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 18px;">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{mth.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{mth.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0 0 24px;">Key research findings</h3>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;">
+      <sc-for list="{{findings}}" as="f" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 10px;">{{f.stat}}</div>
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{f.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{f.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">03 · Personas</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 20px; letter-spacing: -0.02em;">Three distinct users. One shared frustration.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 680px; margin: 0 0 48px;">Each represents a distinct relationship with technology, health, and automation. All share the same core problem.</p>
+    <div class="nura-personas" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{personas}}" as="p" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 4px;">
+            <h3 style="font: var(--text-h3); color: var(--text-primary); margin: 0; letter-spacing: -0.01em;">{{p.name}}</h3>
+            <span style="font: var(--text-h4); color: var(--text-accent);">{{p.age}}</span>
+          </div>
+          <div style="font: var(--text-caption); color: var(--text-tertiary); margin-bottom: 18px;">{{p.role}}</div>
+          <p style="font-family: var(--font-display-italic-family); font-style: italic; font-size: 1.1rem; line-height: 1.45; color: var(--text-primary); margin: 0 0 20px;">{{p.quote}}</p>
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 16px; display: flex; flex-direction: column; gap: 14px;">
+            <div><div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 4px;">Goal</div><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{p.goal}}</p></div>
+            <div><div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 4px;">Frustration</div><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{p.frustration}}</p></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">04 · Insights to decisions</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 780px;">Every design decision traces to a research finding.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 680px; margin: 0 0 48px;">Card sorting, the AQUA framework, and journey mapping turned research into architecture. No feature was added without evidence.</p>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <sc-for list="{{decisions}}" as="d" hint-placeholder-count="6">
+        <div class="nura-dec" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div>
+            <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 8px;">Problem</div>
+            <p style="font: var(--text-body); color: var(--text-primary); margin: 0 0 10px;">{{d.problem}}</p>
+            <p style="font: var(--text-body-sm); color: var(--text-accent); margin: 0;">{{d.evidence}}</p>
+          </div>
+          <div>
+            <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 8px;">Solution</div>
+            <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">{{d.solution}}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">05 · AI system design</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Three layers: rule-based, machine learning, and generative AI.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 680px; margin: 0 0 48px;">Each layer has one job. Together they create an adaptive, explainable sleep platform.</p>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 40px;">
+      <sc-for list="{{aiLayers}}" as="l" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; color: var(--text-accent); margin-bottom: 10px;">{{l.n}}</div>
+          <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 4px;">{{l.title}}</h3>
+          <div style="font: var(--text-caption); color: var(--text-tertiary); margin-bottom: 12px;">{{l.role}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{l.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;">
+      <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-accent-tint);">
+        <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 12px;">On-device processing</h4>
+        <ul style="margin: 0; padding-left: 18px; font: var(--text-body-sm); color: var(--text-primary);"><li>Under 200ms latency, instant response to biometric changes</li><li>Works with no internet, even during outages</li><li>Biometric data never leaves the device</li></ul>
+      </div>
+      <div style="border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+        <h4 style="font: var(--text-h4); color: var(--text-secondary); margin: 0 0 12px;">Cloud alternatives</h4>
+        <ul style="margin: 0; padding-left: 18px; font: var(--text-body-sm); color: var(--text-secondary);"><li>2 to 5 second latency, too slow for real-time adaptation</li><li>Network-dependent, fails without Wi-Fi</li><li>Sensitive health data transmitted off-device</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">06 · Design language</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">One system, two emotional states: morning clarity and nighttime calm.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 680px; margin: 0 0 48px;">Same components, spacing, and interaction patterns, with a complete emotional shift between modes.</p>
+    <div class="nura-dual" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="border-radius: var(--radius-lg); padding: 32px; background: #16213E; color: #E7EEFB;">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #5BB8F5; margin-bottom: 16px;">Night mode · sleep context</div>
+        <ul style="margin: 0; padding-left: 18px; font: var(--text-body-sm); line-height: 1.7;"><li>Deep navy gradient reduces eye strain and signals rest</li><li>Frosted blue glass cards, soft edges, low cognitive demand</li><li>Aqua accents for insights and AI action indicators</li><li>Oversized tap targets for eyes-half-closed, bedside use</li><li>Soft easing on every animation, nothing abrupt at 3 AM</li></ul>
+      </div>
+      <div style="border-radius: var(--radius-lg); padding: 32px; background: #FBF3E4; color: #4A3F2A;">
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #C97A1C; margin-bottom: 16px;">Day mode · review context</div>
+        <ul style="margin: 0; padding-left: 18px; font: var(--text-body-sm); line-height: 1.7;"><li>Soft cream gradient for morning energy and warmth</li><li>Light frosted cards, airy and data-forward for scanning</li><li>Warm orange accents matched to morning review energy</li><li>Simplified to 3 primary metrics after data-overload testing</li><li>Insight callouts surface the week's most significant pattern</li></ul>
+      </div>
+    </div>
+    <div style="margin-top: 40px; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden;">
+      <div style="display: grid; grid-template-columns: 240px 1fr; gap: 0; background: var(--surface-card);">
+        <div style="padding: 16px 24px; font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); border-bottom: 1px solid var(--border-default);">Component</div>
+        <div style="padding: 16px 24px; font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); border-bottom: 1px solid var(--border-default);">Design decision and rationale</div>
+        <div class="nura-spec-c" style="padding: 18px 24px; font: var(--text-body); color: var(--text-primary); border-bottom: 1px solid var(--border-subtle);">8px spacing grid</div>
+        <div class="nura-spec-c" style="padding: 18px 24px; font: var(--text-body-sm); color: var(--text-secondary); border-bottom: 1px solid var(--border-subtle);">Every layout follows 8, 16, 24, 32px increments. It creates rhythm and predictability, which matters most in a nighttime UI where cognitive load has to stay minimal.</div>
+        <div class="nura-spec-c" style="padding: 18px 24px; font: var(--text-body); color: var(--text-primary); border-bottom: 1px solid var(--border-subtle);">Rounded glass cards</div>
+        <div class="nura-spec-c" style="padding: 18px 24px; font: var(--text-body-sm); color: var(--text-secondary); border-bottom: 1px solid var(--border-subtle);">Frosted glass surfaces feel calm and soft. The same treatment carries across control buttons, insight graphs, mood check cards, and weekly charts.</div>
+        <div class="nura-spec-c" style="padding: 18px 24px; font: var(--text-body); color: var(--text-primary); border-bottom: 1px solid var(--border-subtle);">Adaptation animations</div>
+        <div class="nura-spec-c" style="padding: 18px 24px; font: var(--text-body-sm); color: var(--text-secondary); border-bottom: 1px solid var(--border-subtle);">When NURA adjusts something, the control card animates softly, a slow eased bar fill. Abrupt motion would be jarring at 3 AM.</div>
+        <div class="nura-spec-c" style="padding: 18px 24px; font: var(--text-body); color: var(--text-primary);">Accessibility layer</div>
+        <div class="nura-spec-c" style="padding: 18px 24px; font: var(--text-body-sm); color: var(--text-secondary);">Reduced-motion option, large tap targets, high contrast in both themes, and a VoiceOver-friendly focus order. Built for users like Sarah who rely on accessibility features.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-8) var(--section-padding-y);">
+    <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+      <iframe title="NURA — live Figma prototype" src="https://embed.figma.com/design/m3dhim83U2oCDD7Kli1JHU/prototype?node-id=222-2266&embed-host=share" allowfullscreen style="display: block; width: 100%; height: 640px; border: 0;"></iframe>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 16px;">
+      <p style="font: var(--text-caption); color: var(--text-tertiary); margin: 0;">Five connected systems, from welcome and home dashboard to stats and the generative AI assistant. Live, interactive Figma file.</p>
+      <a href="https://www.figma.com/design/m3dhim83U2oCDD7Kli1JHU/prototype?node-id=222-2266&t=9vxmIpZIQC3RTSbT-1" target="_blank" rel="noopener noreferrer" style="font: var(--text-body-sm); font-weight: 600; color: var(--text-accent); text-decoration: none; white-space: nowrap;">Open in Figma &rarr;</a>
+    </div>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--section-padding-y); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">07 · Competitive analysis</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Everyone tracks. Few adapt. None automate with an explanation layer.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 40px;">Over 40 platforms analyzed. The gap is not data collection, every major player collects sleep data. The gap is what happens with that data at 3 AM.</p>
+    <div class="nura-comp">
+      <table style="width: 100%; border-collapse: separate; border-spacing: 0; font: var(--text-body-sm);">
+        <thead>
+          <tr>
+            <th style="text-align: left; padding: 14px 16px 16px 0; color: var(--text-tertiary); font-weight: 600; border-bottom: 1px solid var(--border-default);">Capability</th>
+            <th style="text-align: center; padding: 16px 14px; color: #ffffff; font-weight: 700; background: #3B6EF6; border-radius: 14px 14px 0 0;">NURA</th>
+            <th style="text-align: center; padding: 14px 12px; color: var(--text-tertiary); font-weight: 600; border-bottom: 1px solid var(--border-default);">Eight Sleep</th>
+            <th style="text-align: center; padding: 14px 12px; color: var(--text-tertiary); font-weight: 600; border-bottom: 1px solid var(--border-default);">Sleep Number</th>
+            <th style="text-align: center; padding: 14px 12px; color: var(--text-tertiary); font-weight: 600; border-bottom: 1px solid var(--border-default);">Oura</th>
+            <th style="text-align: center; padding: 14px 12px; color: var(--text-tertiary); font-weight: 600; border-bottom: 1px solid var(--border-default);">Whoop</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{competitors}}" as="row" hint-placeholder-count="9">
+            <tr>
+              <td style="padding: 14px 16px 14px 0; color: var(--text-primary); border-bottom: 1px solid var(--border-subtle);">{{row.feature}}</td>
+              <td style="padding: 14px 12px; text-align: center; background: #EEF3FE; border-left: 1px solid rgba(59,110,246,0.16); border-right: 1px solid rgba(59,110,246,0.16); border-bottom: 1px solid rgba(59,110,246,0.10);"><span data-nura-check style="display: inline-block; font-weight: 800; font-size: 1.2em; color: {{row.nc}};">{{row.n}}</span></td>
+              <td style="padding: 14px 12px; text-align: center; color: {{row.ec}}; border-bottom: 1px solid var(--border-subtle);">{{row.e}}</td>
+              <td style="padding: 14px 12px; text-align: center; color: {{row.sc}}; border-bottom: 1px solid var(--border-subtle);">{{row.s}}</td>
+              <td style="padding: 14px 12px; text-align: center; color: {{row.oc}}; border-bottom: 1px solid var(--border-subtle);">{{row.o}}</td>
+              <td style="padding: 14px 12px; text-align: center; color: {{row.wc}}; border-bottom: 1px solid var(--border-subtle);">{{row.w}}</td>
+            </tr>
+          </sc-for>
+          <tr>
+            <td style="padding: 8px 16px 8px 0;"></td>
+            <td style="padding: 10px 12px; text-align: center; background: #3B6EF6; color: #ffffff; font-weight: 700; font: var(--text-caption); letter-spacing: 0.04em; border-radius: 0 0 14px 14px;">ALL 9</td>
+            <td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="border-left: 3px solid var(--border-accent); padding-left: 24px; max-width: 760px; margin-top: 40px;">
+      <div style="font: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 8px;">Competitive gap</div>
+      <p style="font: var(--text-h4); color: var(--text-primary); margin: 0; font-weight: 500;">NURA is the only concept combining real-time environmental adaptation, generative AI coaching, and a privacy-first on-device architecture.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">08 · Product design and prototype</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Five connected systems. Every screen with a specific job.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 680px; margin: 0 0 48px;">From lo-fi layouts through high-fidelity screens with the dual-mode color system, glass components, and soft animation. Each screen was designed around one job to be done.</p>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <sc-for list="{{screens}}" as="scr" hint-placeholder-count="7">
+        <div style="display: grid; grid-template-columns: 220px 1fr; gap: 28px; border-top: 1px solid var(--border-default); padding-top: 18px;">
+          <div style="font: var(--text-h4); color: var(--text-primary);">{{scr.name}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{scr.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">09 · Usability testing and iteration</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Two rounds. The AI explanation model was the hardest thing to get right.</h2>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 48px;">
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 16px;">What was tested</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{tested}}" as="t" hint-placeholder-count="4"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-subtle); padding-top: 12px;">{{t}}</p></sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #C2410C; margin-bottom: 16px;">Issues found</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{issues}}" as="i" hint-placeholder-count="4"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-subtle); padding-top: 12px;">{{i}}</p></sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 16px;">Iterations made</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{iterations}}" as="it" hint-placeholder-count="4"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-subtle); padding-top: 12px;">{{it}}</p></sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-accent-tint); max-width: 860px;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">Critical testing insight</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0;">Users told during onboarding that NURA needed 7 nights to learn were far more tolerant of early imperfect recommendations. Users who weren't told read a wrong recommendation on night 3 as product failure. Onboarding does not just set up the product, it sets up the entire trust relationship with the AI.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">10 · Impact and outcomes</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 48px; letter-spacing: -0.02em; max-width: 820px;">A validated AI sleep-ecosystem concept that moved beyond basic tracking.</h2>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 56px;">
+      <sc-for list="{{impact}}" as="im" hint-placeholder-count="3">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 20px;">
+          <div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;" data-countup>{{im.value}}</div>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 10px 0 0;">{{im.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 40px;">
+      <div>
+        <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 16px;">What worked</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{worked}}" as="w" hint-placeholder-count="3"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-default); padding-top: 12px;">{{w}}</p></sc-for>
+        </div>
+      </div>
+      <div>
+        <h3 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 16px;">What I'd do differently</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{differently}}" as="df" hint-placeholder-count="3"><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0; border-top: 1px solid var(--border-default); padding-top: 12px;">{{df}}</p></sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">11 · Trust and failure recovery</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">AI systems fail. The question is how gracefully.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 680px; margin: 0 0 48px;">The worst failure is silent failure, where the user doesn't know what went wrong or why. NURA treats every breakdown as a chance to explain, offer control, and rebuild trust.</p>
+    <div class="cs-grid-2" style="display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;">
+      <sc-for list="{{failures}}" as="fl" hint-placeholder-count="4">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 6px;">{{fl.scenario}}</h4>
+          <p style="font: var(--text-caption); color: var(--text-tertiary); margin: 0 0 14px;">{{fl.example}}</p>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{fl.recovery}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--section-padding-y); max-width: 1120px; margin: 0 auto;">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">12 · Strategy</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">NURA doesn't build beds. It becomes the operating system for sleep.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 40px;">The strongest play is not competing on hardware, it is becoming the adaptive intelligence layer any sleep company embeds, the way Dolby became a standard across devices it never made.</p>
+    <div class="cs-stats" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; border-top: 1px solid var(--border-subtle); padding-top: 40px; margin-bottom: 48px;">
+      <div><div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;">$320B</div><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 8px 0 0;">Total sleep-tech market by 2030</p></div>
+      <div><div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;">40M+</div><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 8px 0 0;">Smart beds and wearables sold annually, potential OEM partners</p></div>
+      <div><div style="font: var(--text-stat); color: var(--text-primary); letter-spacing: -0.02em;">3 paths</div><p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 8px 0 0;">OEM licensing, direct consumer app, healthcare and enterprise</p></div>
+    </div>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{strategy}}" as="st" hint-placeholder-count="3">
+        <div style="border-top: 1px solid var(--border-default); padding-top: 18px;">
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{st.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{st.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle); background: var(--surface-sunken);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">13 · Technical feasibility</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Every layer is buildable today, with no new hardware.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 680px; margin: 0 0 48px;">NURA runs on sensors and APIs that already ship in consumer devices. It is an intelligence layer, not another gadget to buy.</p>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;">
+      <sc-for list="{{feasibility}}" as="fe" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="display: inline-block; font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); background: var(--surface-accent-tint); padding: 5px 12px; border-radius: 999px; margin-bottom: 16px;">Ready now</div>
+          <h4 style="font: var(--text-h4); color: var(--text-primary); margin: 0 0 8px;">{{fe.title}}</h4>
+          <p style="font: var(--text-body-sm); color: var(--text-secondary); margin: 0;">{{fe.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-accent); margin-bottom: 16px;">14 · Success metrics and KPIs</div>
+    <h2 style="font-family: var(--font-display-lg-family); font-weight: var(--font-display-lg-weight); font-size: var(--display-lg-size); line-height: var(--font-display-lg-leading); color: var(--text-primary); margin: 0 0 24px; letter-spacing: -0.02em; max-width: 820px;">Measured across three layers: sleep outcome, product health, and business.</h2>
+    <p style="font: var(--text-body-lg); color: var(--text-secondary); max-width: 700px; margin: 0 0 48px;">Each metric traces back to a design decision. Override rate measures trust: if users keep undoing NURA, the explainability layer failed. Latency is why the AI runs on-device.</p>
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 48px;">
+      <sc-for list="{{kpiGroups}}" as="g" hint-placeholder-count="3">
+        <div style="border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; background: var(--surface-card);">
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 18px;">{{g.title}}</div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <sc-for list="{{g.rows}}" as="k" hint-placeholder-count="4">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+                <span style="font: var(--text-body-sm); color: var(--text-secondary);">{{k.label}}</span>
+                <span style="font: var(--text-body); font-weight: 700; color: var(--text-primary); white-space: nowrap;">{{k.target}}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 32px; background: var(--surface-accent-tint); max-width: 860px;">
+      <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-accent); margin-bottom: 12px;">Validation plan</div>
+      <p style="font: var(--text-body-lg); color: var(--text-primary); margin: 0;">A 90-day pilot with 50 users, recruited through sleep-disorder communities, tests these metrics before any OEM partnership. Participants receive Apple Watches and smart-bed integration in exchange for feedback and consent. Success is 70% of participants showing measurable sleep improvement by week four.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-padding-y) var(--space-8); max-width: 800px; margin: 0 auto; border-top: 1px solid var(--border-subtle);">
+    <p style="font-family: var(--font-display-italic-family); font-style: italic; font-size: var(--display-italic-size); line-height: var(--font-display-italic-leading); color: var(--text-primary); margin: 0;">
+      "NURA began as a project about sleep technology. It became a project about trust."
+    </p>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--section-padding-y); max-width: 1120px; margin: 0 auto;">
+    <div class="cs-grid-3" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; border-top: 1px solid var(--border-subtle); padding-top: 48px;">
+      <sc-for list="{{reflection}}" as="r" hint-placeholder-count="3">
+        <div>
+          <div style="font: var(--text-caption); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); margin-bottom: 12px;">{{r.label}}</div>
+          <p style="font: var(--text-body); color: var(--text-secondary); margin: 0;">{{r.body}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: 0 var(--space-8) var(--space-16); max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px;">
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="accent" hint-size="auto,32px">AI product design</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">UX research</x-import>
+      <x-import component-from-global-scope="DornazDesignSystem_1658b6.Tag" tone="outline" hint-size="auto,32px">Wearables</x-import>
+    </div>
+    <a href="SignifyHealth.dc.html" class="np-card" style="display: grid; grid-template-columns: 1fr 300px; align-items: stretch; border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); overflow: hidden; text-decoration: none; color: inherit; background: var(--surface-card); box-shadow: var(--shadow-xs); transition: box-shadow 0.25s ease, transform 0.25s ease;" style-hover="box-shadow: var(--shadow-lg); transform: translateY(-4px);">
+      <div style="padding: 40px 44px;">
+        <div style="font: var(--text-caption); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">Next case study</div>
+        <div style="font: var(--text-h3); color: var(--text-primary); margin-bottom: 20px; letter-spacing: -0.01em;">Signify Health: closing the trust gap</div>
+        <span style="display: inline-flex; align-items: center; gap: 8px; font: var(--text-body-sm); font-weight: 600; color: var(--text-accent);">View case study &rarr;</span>
+      </div>
+      <div style="background: var(--surface-sunken) center / cover no-repeat url(uploads/pasted-1783630425342-0.png); min-height: 200px;"></div>
+    </a>
+  </section>
+
+  <x-import component-from-global-scope="DornazDesignSystem_1658b6.Footer" name="Dornaz" logo-src="assets/logo-icon-blue.png" email="dornaz.nk@gmail.com" links="{{footerLinks}}" hint-size="100%,140px"></x-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    try {
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const root = document.querySelector('[data-nura-root]') || document;
+      const countUp = (el) => {
+        const raw = el.getAttribute('data-countup-raw') || el.textContent;
+        el.setAttribute('data-countup-raw', raw);
+        const nums = raw.match(/\d[\d,\.]*/g);
+        if (!nums || nums.length !== 1) return;
+        const numStr = nums[0];
+        const target = parseFloat(numStr.replace(/,/g, ''));
+        if (!isFinite(target)) return;
+        const isFloat = numStr.indexOf('.') >= 0;
+        const dur = 1200, t0 = performance.now();
+        const tick = (now) => {
+          const p = Math.min(1, (now - t0) / dur);
+          const e = 1 - Math.pow(1 - p, 3);
+          const cur = isFloat ? (target * e).toFixed(1) : Math.round(target * e).toLocaleString();
+          el.textContent = raw.replace(numStr, cur);
+          if (p < 1) requestAnimationFrame(tick); else el.textContent = raw;
+        };
+        requestAnimationFrame(tick);
+      };
+      const sections = Array.prototype.slice.call(root.querySelectorAll('section'));
+      if (reduce || !('IntersectionObserver' in window)) return;
+      sections.forEach((s) => {
+        s.style.opacity = '0';
+        s.style.transform = 'translateY(28px)';
+        s.style.transition = 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+        s.style.willChange = 'opacity, transform';
+      });
+      const checks = Array.prototype.slice.call(root.querySelectorAll('[data-nura-check]'));
+      checks.forEach((c) => {
+        c.style.opacity = '0';
+        c.style.transform = 'scale(0.3)';
+        c.style.transition = 'opacity 0.4s ease, transform 0.5s cubic-bezier(0.34,1.56,0.64,1)';
+      });
+      const popChecks = (container) => {
+        const cs = container.querySelectorAll('[data-nura-check]');
+        for (let i = 0; i < cs.length; i++) {
+          (function (el, idx) {
+            setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 120 + idx * 100);
+          })(cs[i], i);
+        }
+      };
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.style.opacity = '1';
+            en.target.style.transform = 'none';
+            const stats = en.target.querySelectorAll('[data-countup]');
+            for (let i = 0; i < stats.length; i++) countUp(stats[i]);
+            popChecks(en.target);
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      sections.forEach((s) => io.observe(s));
+      // Safety net: if the observer hasn't fired (offscreen/print/embedded/non-painting
+      // contexts), force every still-hidden section visible so the page never stays blank.
+      setTimeout(() => {
+        sections.forEach((s) => {
+          if (getComputedStyle(s).opacity === '0') {
+            s.style.opacity = '1';
+            s.style.transform = 'none';
+            const stats = s.querySelectorAll('[data-countup]');
+            for (let i = 0; i < stats.length; i++) countUp(stats[i]);
+          }
+        });
+        checks.forEach((c) => { if (getComputedStyle(c).opacity === '0') { c.style.opacity = '1'; c.style.transform = 'none'; } });
+      }, 700);
+    } catch (e) { /* fail open, content stays visible */ }
+  }
+  renderVals() {
+    const yes = '\u2713';
+    const no = '\u2717';
+    const yc = 'var(--text-accent)';
+    const nc = 'var(--text-tertiary)';
+    const c = (v) => v ? { v: yes, c: yc } : { v: no, c: nc };
+    const row = (feature, n, e, s, o, w) => {
+      const N = c(n), E = c(e), S = c(s), O = c(o), W = c(w);
+      return { feature, n: N.v, nc: N.c, e: E.v, ec: E.c, s: S.v, sc: S.c, o: O.v, oc: O.c, w: W.v, wc: W.c };
+    };
+    return {
+      navLinks: [
+        { label: 'Home', href: 'Home.dc.html' },
+        { label: 'About', href: 'About.dc.html' },
+      ],
+      footerLinks: [
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dornaz-niknezhad/', icon: 'linkedin' },
+        { label: 'GitHub', href: 'https://github.com/dornaz-nk', icon: 'github' },
+      ],
+      meta: [
+        { label: 'Role', value: 'Lead UX designer & researcher, end to end' },
+        { label: 'Timeline', value: '24 weeks, 2025' },
+        { label: 'Team', value: 'Solo, UNT M.A. thesis' },
+        { label: 'Platform', value: 'iOS · Apple Watch · smart bed · smart home' },
+        { label: 'Tools', value: 'Qualtrics, SurveyMonkey, Excel, ChatGPT, Photoshop, Clipchamp' },
+      ],
+      summary: [
+        { label: 'Problem', body: '1 in 3 adults sleep poorly, and it quietly erodes their mental and physical health over time. Most already own 3 to 5 sleep products, a watch, an app, a thermostat, a smart bed, and each works well alone, but none work together or act on what they know.' },
+        { label: 'Solution', body: 'NURA senses biometric data, learns each person\u2019s patterns, and adjusts the environment on its own, with a generative AI layer that explains every change in plain language.' },
+        { label: 'Result', body: 'A validated concept across two rounds of testing. The biggest driver of trust was not accuracy. It was whether the system explained itself and set expectations up front.' },
+      ],
+      problemStats: [
+        { value: '1 in 3', body: 'Adults experience chronic poor sleep despite owning multiple sleep devices', source: 'CDC, 2023' },
+        { value: '70%', body: 'User dissatisfaction with sleep tech despite billions invested in the category', source: 'BMC Public Health, 2017' },
+        { value: '$320B', body: 'Projected global sleep market by 2030, the fastest-growing wellness category', source: 'Fortune Business Insights, 2024' },
+        { value: '46%', body: 'Potential improvement in deep sleep through adaptive temperature control', source: 'Temperature-Controlled Mattress Study, 2021' },
+      ],
+      methods: [
+        { title: '24 user interviews', body: 'Semi-structured interviews with sleep-device owners across ages 25 to 65.' },
+        { title: 'Sleep science literature review', body: 'Analysis of 40+ peer-reviewed studies on sleep quality factors and interventions.' },
+        { title: 'Device ecosystem mapping', body: 'Documented every sleep-related device people owned, and their lack of integration.' },
+        { title: 'Competitive analysis', body: 'Evaluated 12 sleep tracking apps and 8 smart home sleep products.' },
+      ],
+      findings: [
+        { stat: '3.8 devices per user', title: 'Fragmented experience', body: 'Users own three to five sleep devices that do not communicate, and check multiple apps every morning.' },
+        { stat: '70% stop within 3 months', title: 'Action paralysis', body: 'Even with insights, users do not know what to change or how. Data without action leads to abandonment.' },
+        { stat: '89% reject cameras', title: 'Privacy concerns', body: 'Users are uncomfortable with bedroom cameras and microphones. Passive sensing is strongly preferred.' },
+        { stat: '100% wanted explanations', title: 'Lack of context', body: 'Apps show what happened, not why. Users want AI that connects daily activity to sleep outcomes.' },
+      ],
+      personas: [
+        { name: 'Sarah', age: '56', role: 'Retired teacher · moderate tech literacy', quote: '\u201CManaging all these apps feels like a full-time job. I just want peace of mind while I sleep.\u201D', goal: 'A simple solution that does not require constant attention.', frustration: 'Technology that takes more effort than the problem it solves.' },
+        { name: 'Marcus', age: '34', role: 'Software engineer · high tech literacy', quote: '\u201CI have all this data but no idea what to actually change. It\u2019s just noise.\u201D', goal: 'Actionable insights that drive real improvement.', frustration: 'Data overload with no clear next steps.' },
+        { name: 'Priya', age: '42', role: 'Healthcare worker · night shifts · privacy-conscious', quote: '\u201CI need better sleep but I\u2019m not putting cameras in my bedroom.\u201D', goal: 'Privacy-respecting automation that adapts to irregular patterns.', frustration: 'Invasive monitoring and rigid schedules that do not match reality.' },
+      ],
+      decisions: [
+        { problem: 'Setup requires memorizing disconnected device flows.', evidence: '87% could not configure devices without external help', solution: 'Unified onboarding: a 3-step connection flow with presets and a \u201CYour environment is ready\u201D confirmation.' },
+        { problem: 'Users cannot tell why the environment changed.', evidence: '100% wanted plain-language explanations for AI actions', solution: 'Generative AI explanations: every adjustment includes a \u201CWhy this happened\u201D button with natural-language reasoning.' },
+        { problem: 'Devices, stats, and AI controls live in separate places.', evidence: '91% wanted all sleep data in one unified view', solution: 'A single dashboard: a timeline of biometric data, environmental changes, and AI decisions in context.' },
+        { problem: 'Abrupt light and temperature changes disrupt sleep.', evidence: 'Abrupt changes triggered wake events in 73% of participants', solution: 'Gradual transitions: temperature and lighting shift in small increments over 15-minute windows.' },
+        { problem: 'Users fear losing control of their bedroom.', evidence: '83% wanted manual override; all cited data control as non-negotiable', solution: 'A control layer: pause, adjust, or override the AI at any time. Full manual mode is always available.' },
+        { problem: 'Users do not understand what the system learned.', evidence: 'Users without context lost trust when automation began', solution: 'A 7-night learning arc: a visual indicator of what the AI learns each night, building trust through transparency.' },
+      ],
+      aiLayers: [
+        { n: 'Layer 1', title: 'Rule-based AI', role: 'Immediate response layer', body: 'Instant decisions from predefined rules and user preferences. Handles real-time environmental adjustments.' },
+        { n: 'Layer 2', title: 'Machine learning', role: 'Pattern recognition layer', body: 'Deep-learning models that identify patterns over time and learn each user\u2019s optimal sleep environment.' },
+        { n: 'Layer 3', title: 'Generative AI', role: 'Conversational intelligence layer', body: 'A natural-language interface that explains insights, answers questions, and gives personalized guidance.' },
+      ],
+      competitors: [
+        row('Real-time environmental adaptation', true, false, false, false, false),
+        row('AI-driven automation, no manual input', true, false, false, false, false),
+        row('In-app generative AI chatbot', true, false, false, false, false),
+        row('Explainable AI, plain-language why', true, false, false, false, false),
+        row('Smart temperature regulation', true, true, false, false, false),
+        row('Works with devices you already own', true, false, false, true, true),
+        row('Daily activity and stress context', true, false, false, true, true),
+        row('Privacy-first, on-device processing', true, false, false, false, false),
+        row('Non-medical positioning, wellness not clinical', true, false, false, true, true),
+      ],
+      feasibility: [
+        { title: 'Apple HealthKit integration', body: 'Sleep stages, heart rate, HRV, and wrist temperature are already exposed through HealthKit APIs. No new sensors required.' },
+        { title: 'Smart bed control', body: 'Eight Sleep, Sleep Number, and ChiliSleep expose Wi-Fi and BLE APIs with setTempLevel-style commands over REST or MQTT.' },
+        { title: 'On-device ML inference', body: 'Core ML, TensorFlow Lite, and ONNX Runtime can run lightweight sleep-pattern models in real time on current iPhone hardware.' },
+      ],
+      kpiGroups: [
+        { title: 'Sleep outcomes', rows: [
+          { label: 'Sleep efficiency', target: '+15%' },
+          { label: 'Deep sleep %', target: '+20%' },
+          { label: 'Wake events', target: '-30%' },
+          { label: 'Subjective quality', target: '4.5/5' },
+        ] },
+        { title: 'Product health', rows: [
+          { label: 'AI accuracy', target: '92%' },
+          { label: 'Manual override rate', target: '<8%' },
+          { label: 'Response latency', target: '<200ms' },
+          { label: 'Privacy compliance', target: '100%' },
+        ] },
+        { title: 'Business metrics', rows: [
+          { label: '7-day retention', target: '65%' },
+          { label: '30-day retention', target: '45%' },
+          { label: 'Conversion to paid', target: '12%' },
+          { label: 'NPS score', target: '50+' },
+        ] },
+      ],
+      screens: [
+        { name: 'Home dashboard (adapts)', body: 'Sleep-score ring, live biometric tiles, and the AI readiness message \u201CYour environment is ready for sleep.\u201D Night mode from 9 PM, readable in near-darkness.' },
+        { name: 'Stats screen (learns)', body: 'Weekly totals, efficiency, quality rings, and bedtime charts. Simplified to 3 primary metrics after testing showed data overload. Day mode for morning review.' },
+        { name: 'AI chatbot (explains)', body: 'A generative assistant that explains every adjustment in plain language and offers a one-tap manual override. All copy reviewed for non-clinical language.' },
+        { name: 'Adaptive environment controls', body: 'Bed temperature, firmness, lighting, and sound on one screen with clear controls. Gentle animation visualizes each change, slow by design.' },
+        { name: 'Night check-in flow', body: 'A pre-sleep questionnaire under 60 seconds that feeds the AI context layer, so NURA can anticipate disruptions before they happen.' },
+        { name: 'Device pairing (3-step)', body: 'Reduced from 10 steps after round one of testing. Wearable and smart bed connect in three steps, ending on \u201CYour environment is ready.\u201D' },
+        { name: 'Apple Watch extension', body: 'A glanceable nighttime UI with dark gradients, oversized tap targets, and haptic confirmation. Designed for eyes-closed, bedside use.' },
+      ],
+      tested: [
+        'AI explanation clarity, did users understand why NURA acted?',
+        'Trust in overnight automation made without asking',
+        'Onboarding expectations for the 7-night learning period',
+        'Dashboard comprehension and chart readability',
+        'Manual override visibility, always findable or buried?',
+      ],
+      issues: [
+        'AI explanations too technical, users wanted plain language',
+        'Pairing flow had too many steps, causing drop-off',
+        'Charts showed too many data points to focus on',
+        'Onboarding never explained the 7-night learning period',
+        'Day and night color shift was too subtle to notice',
+      ],
+      iterations: [
+        'Rewrote all AI explanations to plain language with a \u201CWhy NURA did this\u201D summary',
+        'Reduced pairing to 3 steps with a ready-state confirmation',
+        'Simplified charts to 3 primary metrics with clear hierarchy',
+        'Added an onboarding screen explaining the 7-night learning arc',
+        'Sharpened day and night contrast, and made override a persistent button',
+      ],
+      impact: [
+        { value: '46%', body: 'Potential deep-sleep improvement through adaptive temperature, validated by research.' },
+        { value: '3\u00d7', body: 'Higher trust ratings when users understood the AI\u2019s 7-night learning arc during onboarding.' },
+        { value: '90%', body: 'Wearable data accuracy versus clinical-grade sleep labs, enough to power real personalization.' },
+      ],
+      worked: [
+        'Privacy-by-design resonated strongly with users skeptical of bedroom monitoring.',
+        'The three-layer AI balanced instant responses with long-term learning.',
+        'The conversational interface made complex AI decisions transparent.',
+      ],
+      differently: [
+        'Test with a wider age range; most participants were 25 to 35.',
+        'Explore manual override controls earlier in the process.',
+        'Include more edge cases, such as shift workers like Priya.',
+      ],
+      failures: [
+        { scenario: 'Sensor data missing', example: 'Apple Watch disconnects mid-sleep', recovery: 'NURA pauses automatic adjustments and explains in the morning, then resumes on demand or when signal returns.' },
+        { scenario: 'Smart device fails to respond', example: 'Smart bed API times out', recovery: 'NURA retries once, then switches to observation mode: tracking continues, environment control pauses, and the morning summary explains why.' },
+        { scenario: 'AI makes a wrong decision', example: 'Temperature raised while overheating', recovery: 'The user taps undo; NURA reverses instantly, logs negative feedback, asks what it should have done, and retrains overnight.' },
+        { scenario: 'User loses trust in automation', example: 'Several poor nights despite changes', recovery: 'After three low-score nights, NURA offers a conversational reset: try a new approach, or pause automation entirely.' },
+      ],
+      strategy: [
+        { title: 'OEM licensing', body: 'License the AI engine to bed makers, wearable companies, and smart home platforms. NURA becomes the intelligence inside their products.' },
+        { title: 'Direct consumer app', body: 'A standalone iOS app to prove the AI, gather training data, and build brand. Freemium, with adaptive automation via subscription.' },
+        { title: 'Healthcare and enterprise', body: 'Partner with sleep clinics, wellness programs, and insurers. Sleep improvement as a clinical intervention, a long-term play.' },
+      ],
+      reflection: [
+        { label: 'Biggest lesson', body: 'Research should not only validate ideas. It should be willing to change them. The strongest outcome was discovering the original problem statement was wrong.' },
+        { label: 'On trust', body: 'Onboarding is not setup. It is where the trust relationship with an AI is formed, and where it is most easily lost.' },
+        { label: 'Looking forward', body: 'Longer-term prototype evaluation, a more diverse participant pool, and real smart home integrations.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
